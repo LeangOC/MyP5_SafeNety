@@ -96,3 +96,61 @@
 2025-07-14 17:32:15 INFO  DispatcherServlet:554 - Completed initialization in 1 ms
 2025-07-14 17:32:27 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
 2025-07-14 17:32:27 INFO  GracefulShutdown:76 - Graceful shutdown complete
+2025-07-14 18:19:23 INFO  AnnotationConfigContextLoaderUtils:83 - Could not detect default configuration classes for test class [oc.p5.SafeNety.SafeNetyApplicationTests]: SafeNetyApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-14 18:19:23 INFO  SpringBootTestContextBootstrapper:234 - Found @SpringBootConfiguration oc.p5.SafeNety.SafeNetyApplication for test class oc.p5.SafeNety.SafeNetyApplicationTests
+2025-07-14 18:19:24 INFO  SafeNetyApplicationTests:53 - Starting SafeNetyApplicationTests using Java 21.0.6 with PID 22060 (started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-14 18:19:24 INFO  SafeNetyApplicationTests:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-14 18:19:26 INFO  SafeNetyApplicationTests:59 - Started SafeNetyApplicationTests in 2.183 seconds (process running for 5.164)
+2025-07-14 18:27:04 INFO  AnnotationConfigContextLoaderUtils:83 - Could not detect default configuration classes for test class [oc.p5.SafeNety.controller.FirestationControllerTest]: FirestationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-14 18:27:04 INFO  SpringBootTestContextBootstrapper:234 - Found @SpringBootConfiguration oc.p5.SafeNety.SafeNetyApplication for test class oc.p5.SafeNety.controller.FirestationControllerTest
+2025-07-14 18:27:04 INFO  FirestationControllerTest:53 - Starting FirestationControllerTest using Java 21.0.6 with PID 13256 (started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-14 18:27:04 INFO  FirestationControllerTest:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-14 18:27:06 INFO  SpringBootMockServletContext:440 - Initializing Spring TestDispatcherServlet ''
+2025-07-14 18:27:06 INFO  TestDispatcherServlet:532 - Initializing Servlet ''
+2025-07-14 18:27:06 INFO  TestDispatcherServlet:554 - Completed initialization in 1 ms
+2025-07-14 18:27:06 INFO  FirestationControllerTest:59 - Started FirestationControllerTest in 2.437 seconds (process running for 4.121)
+2025-07-14 18:30:09 INFO  AnnotationConfigContextLoaderUtils:83 - Could not detect default configuration classes for test class [oc.p5.SafeNety.controller.FirestationControllerTest]: FirestationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-14 18:30:09 INFO  SpringBootTestContextBootstrapper:234 - Found @SpringBootConfiguration oc.p5.SafeNety.SafeNetyApplication for test class oc.p5.SafeNety.controller.FirestationControllerTest
+2025-07-14 18:30:10 INFO  FirestationControllerTest:53 - Starting FirestationControllerTest using Java 21.0.6 with PID 16688 (started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-14 18:30:10 INFO  FirestationControllerTest:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-14 18:30:13 INFO  SpringBootMockServletContext:440 - Initializing Spring TestDispatcherServlet ''
+2025-07-14 18:30:13 INFO  TestDispatcherServlet:532 - Initializing Servlet ''
+2025-07-14 18:30:13 INFO  TestDispatcherServlet:554 - Completed initialization in 1 ms
+2025-07-14 18:30:13 INFO  FirestationControllerTest:59 - Started FirestationControllerTest in 3.392 seconds (process running for 6.052)
+2025-07-14 18:30:13 INFO  AnnotationConfigContextLoaderUtils:83 - Could not detect default configuration classes for test class [oc.p5.SafeNety.SafeNetyApplicationTests]: SafeNetyApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-14 18:30:13 INFO  SpringBootTestContextBootstrapper:234 - Found @SpringBootConfiguration oc.p5.SafeNety.SafeNetyApplication for test class oc.p5.SafeNety.SafeNetyApplicationTests
+2025-07-14 18:30:14 INFO  SafeNetyApplicationTests:53 - Starting SafeNetyApplicationTests using Java 21.0.6 with PID 16688 (started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-14 18:30:14 INFO  SafeNetyApplicationTests:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-14 18:30:14 INFO  SafeNetyApplicationTests:59 - Started SafeNetyApplicationTests in 0.865 seconds (process running for 7.463)
+2025-07-14 19:40:50 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 18292 (C:\Users\Moi\IdeaProjects\MyP5_SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-14 19:40:50 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-14 19:40:52 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
+2025-07-14 19:40:52 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-14 19:40:52 INFO  StandardService:168 - Starting service [Tomcat]
+2025-07-14 19:40:52 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-14 19:40:52 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
+2025-07-14 19:40:52 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 1173 ms
+2025-07-14 19:40:52 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-14 19:40:52 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-07-14 19:40:52 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 2.208 seconds (process running for 3.162)
+2025-07-14 19:41:08 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-14 19:41:08 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-07-14 19:41:08 INFO  DispatcherServlet:554 - Completed initialization in 0 ms
+2025-07-14 19:42:26 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-14 19:42:26 INFO  GracefulShutdown:76 - Graceful shutdown complete
+2025-07-14 20:55:49 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 22136 (C:\Users\Moi\IdeaProjects\MyP5_SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-14 20:55:49 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-14 20:55:50 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
+2025-07-14 20:55:50 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-14 20:55:50 INFO  StandardService:168 - Starting service [Tomcat]
+2025-07-14 20:55:50 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-14 20:55:50 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
+2025-07-14 20:55:50 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 1144 ms
+2025-07-14 20:55:51 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-14 20:55:51 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-07-14 20:55:51 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 2.23 seconds (process running for 3.308)
+2025-07-14 20:55:54 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-14 20:55:54 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-07-14 20:55:54 INFO  DispatcherServlet:554 - Completed initialization in 1 ms
+2025-07-14 20:59:57 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-14 20:59:57 INFO  GracefulShutdown:76 - Graceful shutdown complete

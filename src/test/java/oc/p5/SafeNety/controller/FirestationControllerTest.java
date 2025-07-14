@@ -1,35 +1,53 @@
 package oc.p5.SafeNety.controller;
 
-import oc.p5.SafeNety.controller.FirestationController;
-import oc.p5.SafeNety.dto.FirestationDTO;
-import oc.p5.SafeNety.service.FirestationService;
 import org.junit.jupiter.api.Test;
-import org.springframework.http.ResponseEntity;
+import oc.p5.SafeNety.service.AlertService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.web.servlet.MockMvc;
 
-import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-class FirestationControllerTest {
+@WebMvcTest(AlertController.class)
+public class FirestationControllerTest {
+
+    @Autowired
+    private MockMvc mockMvc;
+
+    @MockBean
+    private AlertService alertService;
+
 
     @Test
-    void testGetFirestationAddresses() {
-        FirestationService mockService = mock(FirestationService.class);
-        FirestationController controller = new FirestationController(mockService);
+    void testGetPersonsByStation() throws Exception {
+        Map<String, Object> response = new HashMap<>();
+        response.put("adultCount", 2);
+        response.put("childCount", 1);
+        response.put("residents", List.of(
+                Map.of(
+                        "firstName", "John",
+                        "lastName", "Boyd",
+                        "address", "1509 Culver St",
+                        "phone", "841-874-6512"
+                )
+        ));
 
-        List<FirestationDTO> mockResult = Arrays.asList(
-                new FirestationDTO("1509 Culver St"),
-                new FirestationDTO("834 Binoc Ave")
-        );
+        when(alertService.getPersonsCoveredByStation("1")).thenReturn(response);
 
-        when(mockService.getAddressesByStation("1")).thenReturn(mockResult);
-
-        ResponseEntity<List<FirestationDTO>> response = controller.getFirestationAddresses("1");
-
-        assertEquals(200, response.getStatusCodeValue());
-        assertEquals(2, response.getBody().size());
-        assertEquals("1509 Culver St", response.getBody().get(0).getAddress());
+        mockMvc.perform(get("/firestation")
+                        .param("stationNumber", "1"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.adultCount").value(2))
+                .andExpect(jsonPath("$.childCount").value(1))
+                .andExpect(jsonPath("$.residents[0].firstName").value("John"));
     }
+
 }

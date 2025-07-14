@@ -10,7 +10,8 @@
 - dev1 : Utilisation de API Rest http://localhost:8080/hello avec la notation:
         @RestController
 
-- dev2 : model mvc pour l'url http://localhost:8080/firestation?stationNumber==<station_number>
+- dev2 : model mvc pour l'url http://localhost:8080/
+- tation?stationNumber==<station_number>
           qui affiche juste l'adresse correspondante.
 
 - dev3 : mise en place des tests FirestationServiceTest FirestationControllerTest  pour dev2
@@ -19,3 +20,5 @@
 - dev4 : Mise place de Logging (traces d’exécution) avec Log4j ( logs/firestation.log)
 
 - solution_1 : généralisation contenu fichier json avec trois entités ( firestation avec firestation et MedicalRecord" )
+
+- solution_2 : Préparation multualisation des classes pour les Alerts. Affichage donnés avec multi critères"

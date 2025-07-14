@@ -1,9 +1,7 @@
 package oc.p5.SafeNety.service;
-import oc.p5.SafeNety.dto.FirestationDTO;
 import oc.p5.SafeNety.model.Firestation;
 import oc.p5.SafeNety.model.MedicalRecord;
 import oc.p5.SafeNety.model.Person;
-import oc.p5.SafeNety.repository.DataRepository;
 import oc.p5.SafeNety.utils.AgeUtil;
 import oc.p5.SafeNety.utils.DataLoader;
 import org.springframework.stereotype.Service;
@@ -12,21 +10,21 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
-public class FirestationService {
+public class AlertService {
 
     private final List<Person> persons;
     private final List<Firestation> firestations;
     private final List<MedicalRecord> medicalRecords;
 
     // ✅ Constructeur utilisé automatiquement par Spring Boot
-    public FirestationService() {
+    public AlertService() {
         this.persons = DataLoader.loadData().getPersons();
         this.firestations = DataLoader.loadData().getFirestations();
         this.medicalRecords = DataLoader.loadData().getMedicalrecords();
     }
 
     // ✅ Constructeur supplémentaire pour les tests unitaires
-    public FirestationService(List<Person> persons, List<Firestation> firestations, List<MedicalRecord> medicalRecords) {
+    public AlertService(List<Person> persons, List<Firestation> firestations, List<MedicalRecord> medicalRecords) {
         this.persons = persons;
         this.firestations = firestations;
         this.medicalRecords = medicalRecords;

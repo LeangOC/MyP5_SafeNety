@@ -1,57 +1,55 @@
 package oc.p5.SafeNety.service;
-import oc.p5.SafeNety.dto.FirestationDTO;
-import oc.p5.SafeNety.model.Firestation;
-import oc.p5.SafeNety.repository.DataRepository;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.util.Arrays;
+import oc.p5.SafeNety.model.Firestation;
+import oc.p5.SafeNety.model.MedicalRecord;
+import oc.p5.SafeNety.model.Person;
+import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.Map;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class FirestationServiceTest {
 
-    private FirestationService firestationService;
+    private AlertService alertService;
 
-    // Faux repository simulé
-    private static class FakeDataRepository extends DataRepository {
-        @Override
-        public List<Firestation> getFirestations() {
-            return Arrays.asList(
-                    createFirestation("1509 Culver St", "1"),
-                    createFirestation("29 15th St", "2"),
-                    createFirestation("834 Binoc Ave", "1")
-            );
-        }
-
-        private Firestation createFirestation(String address, String station) {
-            Firestation f = new Firestation();
-            f.setAddress(address);
-            f.setStation(station);
-            return f;
-        }
-    }
+    // Mocks manuels
+    private List<Person> persons;
+    private List<Firestation> firestations;
+    private List<MedicalRecord> medicalRecords;
 
     @BeforeEach
     void setUp() {
-        firestationService = new FirestationService(new FakeDataRepository());
+        persons = new ArrayList<>();
+        firestations = new ArrayList<>();
+        medicalRecords = new ArrayList<>();
+
+        // Ajoute une personne adulte
+        persons.add(new Person("John", "Boyd", "1509 Culver St", "Culver", "97451", "841-874-6512", "john@email.com"));
+        medicalRecords.add(new MedicalRecord("John", "Boyd", "03/06/1984",
+                List.of("aznol:350mg"), List.of("nillacilan")));
+
+        // Ajoute un enfant
+        persons.add(new Person("Tenley", "Boyd", "1509 Culver St", "Culver", "97451", "841-874-6512", "tenz@email.com"));
+        medicalRecords.add(new MedicalRecord("Tenley", "Boyd", "02/18/2012", List.of(), List.of("peanut")));
+
+        // Caserne
+        firestations.add(new Firestation("1509 Culver St", "3"));
+
+        // Création du service avec injection manuelle
+        alertService = new AlertService(persons, firestations, medicalRecords);
     }
+
 
     @Test
-    void testGetAddressesByStation_shouldReturnCorrectAddresses() {
-        List<FirestationDTO> result = firestationService.getPersonsCoveredByStation("1");
-
-        assertEquals(2, result.size());
-        assertTrue(result.stream().anyMatch(dto -> dto.getAddress().equals("1509 Culver St")));
-        assertTrue(result.stream().anyMatch(dto -> dto.getAddress().equals("834 Binoc Ave")));
+    void testGetPersonsCoveredByStation() {
+        Map<String, Object> result = alertService.getPersonsCoveredByStation("3");
+        assertEquals(1, result.get("childCount"));
+        assertEquals(1, result.get("adultCount"));
+        List<?> residents = (List<?>) result.get("residents");
+        assertEquals(2, residents.size());
     }
 
-    @Test
-    void testGetAddressesByStation_shouldReturnEmptyListForUnknownStation() {
-        List<FirestationDTO> result = firestationService.getPersonsCoveredByStation("99");
-
-        assertNotNull(result);
-        assertTrue(result.isEmpty());
-    }
 }

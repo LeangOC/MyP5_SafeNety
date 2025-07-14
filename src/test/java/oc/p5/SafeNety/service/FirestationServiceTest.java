@@ -1,5 +1,4 @@
 package oc.p5.SafeNety.service;
-
 import oc.p5.SafeNety.dto.FirestationDTO;
 import oc.p5.SafeNety.model.Firestation;
 import oc.p5.SafeNety.repository.DataRepository;
@@ -41,7 +40,7 @@ class FirestationServiceTest {
 
     @Test
     void testGetAddressesByStation_shouldReturnCorrectAddresses() {
-        List<FirestationDTO> result = firestationService.getAddressesByStation("1");
+        List<FirestationDTO> result = firestationService.getPersonsCoveredByStation("1");
 
         assertEquals(2, result.size());
         assertTrue(result.stream().anyMatch(dto -> dto.getAddress().equals("1509 Culver St")));
@@ -50,7 +49,7 @@ class FirestationServiceTest {
 
     @Test
     void testGetAddressesByStation_shouldReturnEmptyListForUnknownStation() {
-        List<FirestationDTO> result = firestationService.getAddressesByStation("99");
+        List<FirestationDTO> result = firestationService.getPersonsCoveredByStation("99");
 
         assertNotNull(result);
         assertTrue(result.isEmpty());

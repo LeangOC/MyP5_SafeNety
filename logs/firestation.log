@@ -64,3 +64,35 @@
 2025-07-14 14:26:43 INFO  DispatcherServlet:554 - Completed initialization in 0 ms
 2025-07-14 14:29:15 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
 2025-07-14 14:29:15 INFO  GracefulShutdown:76 - Graceful shutdown complete
+2025-07-14 16:56:14 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 1528 (C:\Users\Moi\IdeaProjects\MyP5_SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-14 16:56:14 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-14 16:56:15 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
+2025-07-14 16:56:15 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-14 16:56:15 INFO  StandardService:168 - Starting service [Tomcat]
+2025-07-14 16:56:15 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-14 16:56:15 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
+2025-07-14 16:56:15 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 1063 ms
+2025-07-14 16:56:16 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-14 16:56:16 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-07-14 16:56:16 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 2.15 seconds (process running for 3.29)
+2025-07-14 16:56:23 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-14 16:56:23 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-07-14 16:56:23 INFO  DispatcherServlet:554 - Completed initialization in 0 ms
+2025-07-14 16:57:01 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-14 16:57:01 INFO  GracefulShutdown:76 - Graceful shutdown complete
+2025-07-14 17:32:00 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 16268 (C:\Users\Moi\IdeaProjects\MyP5_SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-14 17:32:00 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-14 17:32:01 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
+2025-07-14 17:32:01 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-14 17:32:01 INFO  StandardService:168 - Starting service [Tomcat]
+2025-07-14 17:32:01 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-14 17:32:01 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
+2025-07-14 17:32:01 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 1050 ms
+2025-07-14 17:32:02 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-14 17:32:02 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-07-14 17:32:02 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 2.061 seconds (process running for 3.017)
+2025-07-14 17:32:15 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-14 17:32:15 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-07-14 17:32:15 INFO  DispatcherServlet:554 - Completed initialization in 1 ms
+2025-07-14 17:32:27 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-14 17:32:27 INFO  GracefulShutdown:76 - Graceful shutdown complete

@@ -17,3 +17,5 @@
           avec JUnits et Rapport JaCoco 
 
 - dev4 : Mise place de Logging (traces d’exécution) avec Log4j ( logs/firestation.log)
+
+- solution_1 : généralisation contenu fichier json avec trois entités ( firestation avec firestation et MedicalRecord" )

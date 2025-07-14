@@ -13,3 +13,6 @@
 - dev2 : model mvc pour l'url http://localhost:8080/firestation?stationNumber==<station_number>
           qui affiche juste l'adresse correspondante.
 
+- dev3 : mise en place des tests FirestationServiceTest FirestationControllerTest  pour dev2 
+          avec JUnits et Rapport JaCoco 
+

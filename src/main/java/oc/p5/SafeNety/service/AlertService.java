@@ -1,4 +1,6 @@
 package oc.p5.SafeNety.service;
+import oc.p5.SafeNety.dto.FirestationCoverageDTO;
+import oc.p5.SafeNety.dto.ResidentDTO;
 import oc.p5.SafeNety.model.Firestation;
 import oc.p5.SafeNety.model.MedicalRecord;
 import oc.p5.SafeNety.model.Person;
@@ -30,38 +32,35 @@ public class AlertService {
         this.medicalRecords = medicalRecords;
     }
 
-    public Map<String, Object> getPersonsCoveredByStation(String stationNumber) {
+    public FirestationCoverageDTO getPersonsCoveredByStation(String stationNumber) {
         Set<String> addresses = firestations.stream()
                 .filter(f -> f.getStation().equals(stationNumber))
                 .map(Firestation::getAddress)
                 .collect(Collectors.toSet());
 
-        List<Map<String, String>> residents = new ArrayList<>();
+        List<ResidentDTO> residents = new ArrayList<>();
         int adults = 0;
         int children = 0;
 
         for (Person p : persons) {
             if (addresses.contains(p.getAddress())) {
                 int age = calculateAge(p);
-                if (age <= 18) {
+                if (age >= 0 && age <= 18) {
                     children++;
-                } else {
+                } else if (age > 18) {
                     adults++;
                 }
-                residents.add(Map.of(
-                        "firstName", p.getFirstName(),
-                        "lastName", p.getLastName(),
-                        "address", p.getAddress(),
-                        "phone", p.getPhone()
+
+                residents.add(new ResidentDTO(
+                        p.getFirstName(),
+                        p.getLastName(),
+                        p.getAddress(),
+                        p.getPhone()
                 ));
             }
         }
 
-        Map<String, Object> result = new HashMap<>();
-        result.put("residents", residents);
-        result.put("adultCount", adults);
-        result.put("childCount", children);
-        return result;
+        return new FirestationCoverageDTO(residents, adults, children);
     }
 
     private MedicalRecord getMedicalRecord(String firstName, String lastName) {

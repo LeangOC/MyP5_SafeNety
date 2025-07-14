@@ -53,6 +53,16 @@
 		</dependency>
 <!-- Tests JUnit pour dev3  Fin -->
 
+<!-- Tests JUnit avec Mokito pour solution_3-->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>5.12.0</version>
+			<scope>test</scope>
+		</dependency>
+<!-- Tests JUnit avec Mokito pour solution_3 Fin-->
+
+
 		<!-- dev4 : log4j -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

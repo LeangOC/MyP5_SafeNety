@@ -22,3 +22,5 @@
 - solution_1 : généralisation contenu fichier json avec trois entités ( firestation avec firestation et MedicalRecord" )
 
 - solution_2 : Préparation multualisation des classes pour les Alerts. Affichage donnés avec multi critères"
+
+- solution_3 : Améliorer la couverture des tests

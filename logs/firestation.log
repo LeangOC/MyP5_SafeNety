@@ -1,0 +1,21 @@
+2025-07-14 12:00:38 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 8784 (C:\Users\Moi\IdeaProjects\SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\SafeNety)
+2025-07-14 12:00:38 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-14 12:00:39 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
+2025-07-14 12:00:39 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-14 12:00:39 INFO  StandardService:168 - Starting service [Tomcat]
+2025-07-14 12:00:39 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-14 12:00:39 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
+2025-07-14 12:00:39 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 1002 ms
+2025-07-14 12:00:39 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-14 12:00:39 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-07-14 12:00:39 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 1.987 seconds (process running for 3.1)
+2025-07-14 12:00:57 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-14 12:00:57 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-07-14 12:00:57 INFO  DispatcherServlet:554 - Completed initialization in 0 ms
+2025-07-14 12:05:03 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-14 12:05:03 INFO  GracefulShutdown:76 - Graceful shutdown complete
+2025-07-14 12:05:33 INFO  AnnotationConfigContextLoaderUtils:83 - Could not detect default configuration classes for test class [oc.p5.SafeNety.SafeNetyApplicationTests]: SafeNetyApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-14 12:05:33 INFO  SpringBootTestContextBootstrapper:234 - Found @SpringBootConfiguration oc.p5.SafeNety.SafeNetyApplication for test class oc.p5.SafeNety.SafeNetyApplicationTests
+2025-07-14 12:05:34 INFO  SafeNetyApplicationTests:53 - Starting SafeNetyApplicationTests using Java 21.0.6 with PID 1764 (started by Moi in C:\Users\Moi\IdeaProjects\SafeNety)
+2025-07-14 12:05:34 INFO  SafeNetyApplicationTests:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-14 12:05:36 INFO  SafeNetyApplicationTests:59 - Started SafeNetyApplicationTests in 2.428 seconds (process running for 7.252)

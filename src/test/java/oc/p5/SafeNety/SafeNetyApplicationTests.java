@@ -8,6 +8,12 @@ class SafeNetyApplicationTests {
 
     @Test
     void contextLoads() {
+        // Juste pour s'assurer que le contexte se lance sans erreur
     }
 
+    @Test
+    void testMain() {
+        // ➤ Appel explicite de la méthode main pour la couverture
+        SafeNetyApplication.main(new String[] {});
+    }
 }

@@ -24,3 +24,34 @@
 - solution_2 : Préparation multualisation des classes pour les Alerts. Affichage donnés avec multi critères"
 
 - solution_3 : Améliorer la couverture des tests
+
+- solution_4 : 
+    🔸/childAlert?address=<address>
+    Renvoie la liste des enfants (≤ 18 ans) et autres membres du foyer.
+    curl "http://localhost:8080/childAlert?address=1509%20Culver%20St"
+
+    🔸/phoneAlert?firestation=<station_number>
+    Liste des numéros de téléphone des habitants couverts par une caserne.
+    curl "http://localhost:8080/phoneAlert?firestation=3"
+
+   🔸 /fire?address=<address>
+    Infos des habitants d’une adresse (âge, antécédents, téléphone, caserne).
+    curl "http://localhost:8080/fire?address=1509%20Culver%20St"
+
+   🔸 /flood/stations?stations=<station1,station2,...>
+    Liste des foyers couverts par des stations : habitants + infos médicales.
+    curl "http://localhost:8080/flood/stations?stations=1,2,3"
+
+    🔸 /personInfo?lastName=<lastName>
+    Infos complètes (âge, adresse, antécédents, email) pour une famille.
+    curl "http://localhost:8080/personInfo?lastName=Boyd"
+
+
+   🔸 /communityEmail?city=<city>
+    Cette url doit retourner les adresses mail de tous les habitants de la ville
+    curl "http://localhost:8080/communityEmail?city=Culver"
+
+
+            
+    
+

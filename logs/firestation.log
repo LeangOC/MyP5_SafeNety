@@ -509,3 +509,100 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2025-07-16 16:27:44 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 1.098 seconds (process running for 11.122)
 2025-07-16 16:27:44 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
 2025-07-16 16:27:44 INFO  GracefulShutdown:76 - Graceful shutdown complete
+2025-07-16 20:31:09 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 21200 (C:\Users\Moi\IdeaProjects\MyP5_SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-16 20:31:09 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-16 20:31:09 WARN  AnnotationConfigServletWebServerApplicationContext:635 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [oc.p5.SafeNety.filter.RequestLoggingFilter]
+2025-07-16 20:31:10 ERROR SpringApplication:857 - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: I/O failure while processing configuration class [oc.p5.SafeNety.filter.RequestLoggingFilter]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:286) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:218) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:354) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:281) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:204) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:172) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:418) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) [spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) [spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) [spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) [spring-boot-3.5.3.jar:3.5.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) [spring-boot-3.5.3.jar:3.5.3]
+	at oc.p5.SafeNety.SafeNetyApplication.main(SafeNetyApplication.java:9) [classes/:?]
+Caused by: java.io.IOException: Failed to load class [javax.servlet.Filter]
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:708) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1060) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:441) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:385) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:281) ~[spring-context-6.2.8.jar:6.2.8]
+	... 18 more
+Caused by: java.lang.ClassNotFoundException: javax.servlet.Filter
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[?:?]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[?:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
+	at java.base/java.lang.Class.forName0(Native Method) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:534) ~[?:?]
+	at java.base/java.lang.Class.forName(Class.java:513) ~[?:?]
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:321) ~[spring-core-6.2.8.jar:6.2.8]
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:705) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:1060) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:441) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:385) ~[spring-context-6.2.8.jar:6.2.8]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:281) ~[spring-context-6.2.8.jar:6.2.8]
+	... 18 more
+2025-07-16 20:36:26 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 4280 (C:\Users\Moi\IdeaProjects\MyP5_SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-16 20:36:26 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-16 20:36:27 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
+2025-07-16 20:36:27 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-16 20:36:27 INFO  StandardService:168 - Starting service [Tomcat]
+2025-07-16 20:36:27 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-16 20:36:28 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
+2025-07-16 20:36:28 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 1062 ms
+2025-07-16 20:36:28 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-16 20:36:28 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-07-16 20:36:28 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 2.085 seconds (process running for 2.997)
+2025-07-16 20:36:44 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-16 20:36:44 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-07-16 20:36:44 INFO  DispatcherServlet:554 - Completed initialization in 1 ms
+2025-07-16 20:36:44 INFO  RequestLoggingFilter:22 - HTTP GET Request to '/firestation' from IP: 0:0:0:0:0:0:0:1
+2025-07-16 20:39:22 INFO  RequestLoggingFilter:22 - HTTP GET Request to '/firestation' from IP: 0:0:0:0:0:0:0:1
+2025-07-16 20:42:51 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-16 20:42:51 INFO  GracefulShutdown:76 - Graceful shutdown complete
+2025-07-16 20:43:04 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 14200 (C:\Users\Moi\IdeaProjects\MyP5_SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-16 20:43:04 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-16 20:43:05 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
+2025-07-16 20:43:05 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-16 20:43:05 INFO  StandardService:168 - Starting service [Tomcat]
+2025-07-16 20:43:05 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-16 20:43:05 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
+2025-07-16 20:43:05 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 1008 ms
+2025-07-16 20:43:05 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-16 20:43:05 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-07-16 20:43:05 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 1.984 seconds (process running for 2.952)
+2025-07-16 20:43:22 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-16 20:43:22 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-07-16 20:43:22 INFO  DispatcherServlet:554 - Completed initialization in 1 ms
+2025-07-16 20:43:22 INFO  RequestLoggingFilter:31 - HTTP GET request to '/firestation?stationNumber=2' from IP: 0:0:0:0:0:0:0:1
+2025-07-16 21:06:58 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-16 21:06:58 INFO  GracefulShutdown:76 - Graceful shutdown complete
+2025-07-16 21:17:10 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 21440 (C:\Users\Moi\IdeaProjects\MyP5_SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-16 21:17:10 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-16 21:17:11 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
+2025-07-16 21:17:11 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-16 21:17:11 INFO  StandardService:168 - Starting service [Tomcat]
+2025-07-16 21:17:11 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-16 21:17:11 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
+2025-07-16 21:17:11 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 1058 ms
+2025-07-16 21:17:12 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-16 21:17:12 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-07-16 21:17:12 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 2.113 seconds (process running for 3.212)
+2025-07-16 21:17:30 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-16 21:17:30 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-07-16 21:17:30 INFO  DispatcherServlet:554 - Completed initialization in 0 ms
+2025-07-16 21:17:30 INFO  RequestLoggingFilter:31 - HTTP GET request to '/firestation?stationNumber=2' from IP: 0:0:0:0:0:0:0:1
+2025-07-16 21:18:18 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-16 21:18:18 INFO  GracefulShutdown:76 - Graceful shutdown complete

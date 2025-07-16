@@ -52,6 +52,8 @@
     curl "http://localhost:8080/communityEmail?city=Culver"
 
 - solution_5 : "Tests Unitaires pour les Urls"
+
+- solution_6 : "Mise en place de logger requête  HTTP GET request to firestation?stationNumber=2"
             
     
 

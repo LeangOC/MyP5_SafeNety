@@ -603,6 +603,6 @@ Caused by: java.lang.ClassNotFoundException: javax.servlet.Filter
 2025-07-16 21:17:30 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-07-16 21:17:30 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
 2025-07-16 21:17:30 INFO  DispatcherServlet:554 - Completed initialization in 0 ms
-2025-07-16 21:17:30 INFO  RequestLoggingFilter:31 - HTTP GET request to '/firestation?stationNumber=2' from IP: 0:0:0:0:0:0:0:1
+2025-07-16 21:17:30 A" from IP: 0:0:0:0:0:0:0:1
 2025-07-16 21:18:18 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
 2025-07-16 21:18:18 INFO  GracefulShutdown:76 - Graceful shutdown complete

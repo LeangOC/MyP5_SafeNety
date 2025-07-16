@@ -93,6 +93,34 @@ class AlertServiceTest {
         assertTrue(emails.contains("john@email.com"));
         assertTrue(emails.contains("tenz@email.com"));
     }
+    @Test
+    void testGetHouseholdsByStations() {
+        Map<String, List<Map<String, Object>>> result = alertService.getHouseholdsByStations("3");
+
+        assertEquals(1, result.size());
+        assertTrue(result.containsKey("1509 Culver St"));
+
+        List<Map<String, Object>> household = result.get("1509 Culver St");
+        assertEquals(2, household.size());
+
+        Map<String, Object> person1 = household.get(0);
+        assertTrue(person1.containsKey("firstName"));
+        assertTrue(person1.containsKey("age"));
+        assertTrue(person1.containsKey("medications"));
+    }
+    @Test
+    void testGetPersonsByLastName() {
+        List<Map<String, Object>> personsByLastName = alertService.getPersonsByLastName("Boyd");
+
+        assertEquals(2, personsByLastName.size());
+
+        Map<String, Object> person = personsByLastName.get(0);
+        assertEquals("Boyd", person.get("lastName"));
+        assertTrue(person.containsKey("firstName"));
+        assertTrue(person.containsKey("age"));
+        assertTrue(person.containsKey("medications"));
+    }
+
 
 }
 

@@ -1,55 +1,98 @@
 package oc.p5.SafeNety.service;
 
-import oc.p5.SafeNety.dto.FirestationCoverageDTO;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import oc.p5.SafeNety.model.Firestation;
 import oc.p5.SafeNety.model.MedicalRecord;
 import oc.p5.SafeNety.model.Person;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class AlertServiceTest {
 
     private AlertService alertService;
 
+    // Mocks manuels
+    private List<Person> persons;
+    private List<Firestation> firestations;
+    private List<MedicalRecord> medicalRecords;
+
     @BeforeEach
     void setUp() {
-        // ➤ Données de test
-        Person adult = new Person("John", "Doe", "123 Rue Lafayette", "Paris", "75000", "123-456", "john@example.com");
-        Person child = new Person("Emma", "Doe", "123 Rue Lafayette", "Paris", "75000", "789-123", "emma@example.com");
+        persons = new ArrayList<>();
+        firestations = new ArrayList<>();
+        medicalRecords = new ArrayList<>();
 
-        Firestation firestation = new Firestation("123 Rue Lafayette", "1");
+        // Ajoute une personne adulte
+        persons.add(new Person("John", "Boyd", "1509 Culver St", "Culver", "97451", "841-874-6512", "john@email.com"));
+        medicalRecords.add(new MedicalRecord("John", "Boyd", "03/06/1984",
+                List.of("aznol:350mg"), List.of("nillacilan")));
 
-        // ➤ Adult: 30 ans, Child: 10 ans
-        MedicalRecord adultRecord = new MedicalRecord("John", "Doe", LocalDate.now().minusYears(30).format(DateTimeFormatter.ofPattern("MM/dd/yyyy")), List.of(), List.of());
-        MedicalRecord childRecord = new MedicalRecord("Emma", "Doe", LocalDate.now().minusYears(10).format(DateTimeFormatter.ofPattern("MM/dd/yyyy")), List.of(), List.of());
+        // Ajoute un enfant
+        persons.add(new Person("Tenley", "Boyd", "1509 Culver St", "Culver", "97451", "841-874-6512", "tenz@email.com"));
+        medicalRecords.add(new MedicalRecord("Tenley", "Boyd", "02/18/2012", List.of(), List.of("peanut")));
 
-        // ➤ Initialisation manuelle avec constructeur de test
-        alertService = new AlertService(
-                List.of(adult, child),
-                List.of(firestation),
-                List.of(adultRecord, childRecord)
-        );
+        // Caserne
+        firestations.add(new Firestation("1509 Culver St", "3"));
+
+        // Création du service avec injection manuelle
+        alertService = new AlertService(persons, firestations, medicalRecords);
+    }
+
+    @Test
+    void testGetChildrenByAddress() {
+        Map<String, Object> result = alertService.getChildrenByAddress("1509 Culver St");
+        List<?> children = (List<?>) result.get("children");
+        List<?> others = (List<?>) result.get("otherHouseholdMembers");
+
+        assertEquals(1, children.size());
+        assertEquals(1, others.size());
+
+        Map<String, Object> child = (Map<String, Object>) children.get(0);
+        assertEquals("Tenley", child.get("firstName"));
+    }
+
+    @Test
+    void testGetPhonesByStation() {
+        List<String> phones = alertService.getPhonesByStation("3");
+        assertEquals(List.of("841-874-6512"), phones);
+    }
+
+    @Test
+    void testGetPersonsWithMedicalInfoByAddress() {
+        Map<String, Object> result = alertService.getPersonsWithMedicalInfoByAddress("1509 Culver St");
+
+        assertEquals("3", result.get("stationNumber"));
+        List<?> residents = (List<?>) result.get("residents");
+        assertEquals(2, residents.size());
+
+        Map<String, Object> resident = (Map<String, Object>) residents.get(0);
+        assertTrue(resident.containsKey("firstName"));
+        assertTrue(resident.containsKey("age"));
+        assertTrue(resident.containsKey("medications"));
     }
 
     @Test
     void testGetPersonsCoveredByStation() {
-        // ➤ Exécution
-        FirestationCoverageDTO result = alertService.getPersonsCoveredByStation("1");
+        Map<String, Object> result = alertService.getPersonsCoveredByStation("3");
 
-        // ➤ Vérifications
-        assertNotNull(result);
-        assertEquals(2, result.getResidents().size(), "Il doit y avoir 2 résidents");
-        assertEquals(1, result.getAdultCount(), "Il doit y avoir 1 adulte");
-        assertEquals(1, result.getChildCount(), "Il doit y avoir 1 enfant");
-
-        // ➤ Vérifie les résidents retournés
-        assertTrue(result.getResidents().stream().anyMatch(r -> r.getFirstName().equals("John")));
-        assertTrue(result.getResidents().stream().anyMatch(r -> r.getFirstName().equals("Emma")));
+        assertEquals(1, result.get("childCount"));
+        assertEquals(1, result.get("adultCount"));
+        List<?> residents = (List<?>) result.get("residents");
+        assertEquals(2, residents.size());
     }
+
+    @Test
+    void testGetEmailsByCity() {
+        List<String> emails = alertService.getEmailsByCity("Culver");
+        assertTrue(emails.contains("john@email.com"));
+        assertTrue(emails.contains("tenz@email.com"));
+    }
+
 }
+

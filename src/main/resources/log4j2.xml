@@ -17,15 +17,10 @@
         <AppenderRef ref="Console" />
         <AppenderRef ref="FileLogger" />
     </Root>
-    <!-- Logger dédié aux contrôleurs REST
-    <Logger name="oc.p5.SafeNety.controller" level="info" additivity="false">
-        <AppenderRef ref="Console" />
-        <AppenderRef ref="FileLogger" />
-    </Logger>
+        <Logger name="oc.p5.SafeNety.filter" level="debug" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogger"/>
+        </Logger>
 
-    <Logger name="oc.p5.SafeNety.filter.RequestLoggingFilter" level="info" additivity="false">
-        <AppenderRef ref="Console"/>
-        <AppenderRef ref="FileLogger"/>
-    </Logger> -->
-    </Loggers>
+      </Loggers>
 </Configuration>

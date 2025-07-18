@@ -56,4 +56,15 @@
 - solution_6 : "Mise en place de logger requête  HTTP GET request to firestation?stationNumber=2"
             
     
+- solution_7 : 
+- ## 📌 1. Endpoints REST (CRUD)
 
+### 🔹 `/person`
+
+| Méthode | Action            | Exemple `curl` |
+|--------|-------------------|----------------|
+| POST   | Ajouter une personne | `curl -X POST -H "Content-Type: application/json" -d '{"firstName":"Jane", "lastName":"Doe", "address":"123 Main St", "city":"Culver", "zip":"97451", "phone":"123-456", "email":"jane@email.com"}' http://localhost:8080/person` |
+| PUT    | Mettre à jour      | `curl -X PUT -H "Content-Type: application/json" -d '{"firstName":"Jane", "lastName":"Doe", "address":"456 Elm St", ...}' http://localhost:8080/person` |
+| DELETE | Supprimer          | `curl -X DELETE "http://localhost:8080/person?firstName=Jane&lastName=Doe"` |
+
+---

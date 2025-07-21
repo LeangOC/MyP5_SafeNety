@@ -67,6 +67,7 @@
 | PUT    | Mettre à jour      | `curl -X PUT -H "Content-Type: application/json" -d '{"firstName":"Dupont", "lastName":"BON", "address":"11 Rue Saint Juste", "city":"IVRY", "zip":"94200", "phone":"0123456789", "email":"DupondBON@email.com"}' http://localhost:8080/person`  |
 | DELETE | Supprimer          | `curl -X DELETE "http://localhost:8080/person?firstName=Dupont&lastName=BON"`                                                                                                                                                                    |
 
+- solution_8 
 ### 🔹 `/firestation`
 | Méthode | Action                | Exemple `curl` |
 |--------|-----------------------|----------------|

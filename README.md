@@ -73,4 +73,4 @@
 |--------|-----------------------|----------------|
 | POST   | Ajouter un mapping    | `curl -X POST -H "Content-Type: application/json" -d '{"address":"1509 Culver St","station":"3"}' http://localhost:8080/firestation` |
 | PUT    | Mettre à jour         | `curl -X PUT -H "Content-Type: application/json" -d '{"address":"1509 Culver St","station":"4"}' http://localhost:8080/firestation` |
-| DELETE | Supprimer un mapping  | `curl -X DELETE "http://localhost:8080/firestation?address=1509 Culver St"` ou `?station=3` |
+| DELETE | Supprimer un mapping  | `curl -X DELETE "http://localhost:8080/firestation?address=1509 Culver St"` ou `?station=3` | A faire sous Postman

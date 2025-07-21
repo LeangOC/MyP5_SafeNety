@@ -771,3 +771,26 @@ java.lang.IllegalArgumentException: Invalid character found in the request targe
 2025-07-21 15:25:41 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
 2025-07-21 15:25:42 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
 2025-07-21 15:25:42 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 2.692 seconds (process running for 3.786)
+2025-07-21 15:35:05 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-21 15:35:05 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-07-21 15:35:05 INFO  DispatcherServlet:554 - Completed initialization in 0 ms
+2025-07-21 15:35:05 INFO  RequestLoggingFilter:31 - URI: /firestation
+2025-07-21 15:35:05 DEBUG RequestLoggingFilter:34 - Request from IP: 0:0:0:0:0:0:0:1, method: POST, URI: /firestation, User-Agent: curl/8.7.1
+2025-07-21 15:35:38 INFO  RequestLoggingFilter:31 - URI: /firestation
+2025-07-21 15:35:38 DEBUG RequestLoggingFilter:34 - Request from IP: 0:0:0:0:0:0:0:1, method: PUT, URI: /firestation, User-Agent: curl/8.7.1
+2025-07-21 15:36:44 INFO  RequestLoggingFilter:31 - URI: /firestation?address=1509
+2025-07-21 15:36:44 DEBUG RequestLoggingFilter:34 - Request from IP: 0:0:0:0:0:0:0:1, method: DELETE, URI: /firestation?address=1509, User-Agent: curl/8.7.1
+2025-07-21 15:38:53 INFO  RequestLoggingFilter:31 - URI: /firestation?station=3
+2025-07-21 15:38:53 DEBUG RequestLoggingFilter:34 - Request from IP: 0:0:0:0:0:0:0:1, method: DELETE, URI: /firestation?station=3, User-Agent: PostmanRuntime/7.44.1
+2025-07-21 15:39:32 INFO  RequestLoggingFilter:31 - URI: /firestation?address=1509%20Culver%20St
+2025-07-21 15:39:32 DEBUG RequestLoggingFilter:34 - Request from IP: 0:0:0:0:0:0:0:1, method: DELETE, URI: /firestation?address=1509%20Culver%20St, User-Agent: PostmanRuntime/7.44.1
+2025-07-21 15:40:31 INFO  RequestLoggingFilter:31 - URI: /firestation?address=1509
+2025-07-21 15:40:31 DEBUG RequestLoggingFilter:34 - Request from IP: 0:0:0:0:0:0:0:1, method: DELETE, URI: /firestation?address=1509, User-Agent: curl/8.7.1
+2025-07-21 15:41:17 INFO  RequestLoggingFilter:31 - URI: /firestation?address=1509%Culver%St
+2025-07-21 15:41:17 DEBUG RequestLoggingFilter:34 - Request from IP: 0:0:0:0:0:0:0:1, method: DELETE, URI: /firestation?address=1509%Culver%St, User-Agent: curl/8.7.1
+2025-07-21 15:41:17 INFO  Parameters:168 - Character decoding failed. Parameter [address] with value [1509%Culver%St] has been ignored. Note that the name and value quoted here may be corrupted due to the failed decoding. Use debug level logging to see the original, non-corrupted values.
+ Note: further occurrences of Parameter errors will be logged at DEBUG level.
+2025-07-21 15:41:50 INFO  RequestLoggingFilter:31 - URI: /firestation?address=1509%Culver%St
+2025-07-21 15:41:50 DEBUG RequestLoggingFilter:34 - Request from IP: 0:0:0:0:0:0:0:1, method: DELETE, URI: /firestation?address=1509%Culver%St, User-Agent: curl/8.7.1
+2025-07-21 17:12:56 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-21 17:12:56 INFO  GracefulShutdown:76 - Graceful shutdown complete

@@ -57,14 +57,19 @@
             
     
 - solution_7 : 
-- ## 📌 1. Endpoints REST (CRUD)
+- ## 📌 1. Endpoints API REST : POST PUT et DELETE
 
 ### 🔹 `/person`
 
-| Méthode | Action            | Exemple `curl` |
-|--------|-------------------|----------------|
-| POST   | Ajouter une personne | `curl -X POST -H "Content-Type: application/json" -d '{"firstName":"Jane", "lastName":"Doe", "address":"123 Main St", "city":"Culver", "zip":"97451", "phone":"123-456", "email":"jane@email.com"}' http://localhost:8080/person` |
-| PUT    | Mettre à jour      | `curl -X PUT -H "Content-Type: application/json" -d '{"firstName":"Jane", "lastName":"Doe", "address":"456 Elm St", ...}' http://localhost:8080/person` |
-| DELETE | Supprimer          | `curl -X DELETE "http://localhost:8080/person?firstName=Jane&lastName=Doe"` |
+| Méthode | Action            | Exemple `curl`                                                                                                                                                                                                                                   |
+|--------|-------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| POST   | Ajouter une personne | `curl -X POST -H "Content-Type: application/json" -d '{"firstName":"Dupont", "lastName":"BON", "address":"12 Rue Saint Juste", "city":"IVRY", "zip":"94200", "phone":"0123456789", "email":"DupondBON@email.com"}' http://localhost:8080/person` |
+| PUT    | Mettre à jour      | `curl -X PUT -H "Content-Type: application/json" -d '{"firstName":"Dupont", "lastName":"BON", "address":"11 Rue Saint Juste", "city":"IVRY", "zip":"94200", "phone":"0123456789", "email":"DupondBON@email.com"}' http://localhost:8080/person`  |
+| DELETE | Supprimer          | `curl -X DELETE "http://localhost:8080/person?firstName=Dupont&lastName=BON"`                                                                                                                                                                    |
 
----
+### 🔹 `/firestation`
+| Méthode | Action                | Exemple `curl` |
+|--------|-----------------------|----------------|
+| POST   | Ajouter un mapping    | `curl -X POST -H "Content-Type: application/json" -d '{"address":"1509 Culver St","station":"3"}' http://localhost:8080/firestation` |
+| PUT    | Mettre à jour         | `curl -X PUT -H "Content-Type: application/json" -d '{"address":"1509 Culver St","station":"4"}' http://localhost:8080/firestation` |
+| DELETE | Supprimer un mapping  | `curl -X DELETE "http://localhost:8080/firestation?address=1509 Culver St"` ou `?station=3` |

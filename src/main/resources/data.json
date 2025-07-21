@@ -220,6 +220,12 @@
   }, {
     "address" : "951 LoneTree Rd",
     "station" : "2"
+  }, {
+    "address" : "1509 Culver St",
+    "station" : "3"
+  }, {
+    "address" : "0000 Culver St",
+    "station" : "3"
   } ],
   "medicalrecords" : [ {
     "firstName" : "John",

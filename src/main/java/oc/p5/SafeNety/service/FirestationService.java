@@ -14,13 +14,13 @@ public class FirestationService {
 
     public void addFirestation(FirestationDTO dto) {
         Firestation f = new Firestation();
-        f.setAddress(dto.address);
-        f.setStation(dto.station);
+        f.setAddress(dto.getAddress());
+        f.setStation(dto.getStation());
         repository.save(f);
     }
 
     public void updateFirestation(FirestationDTO dto) {
-        repository.update(new Firestation(dto.address, dto.station));
+        repository.update(new Firestation(dto.getAddress(), dto.getStation()));
     }
 
     public void deleteByAddress(String address) {

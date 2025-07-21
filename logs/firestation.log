@@ -794,3 +794,23 @@ java.lang.IllegalArgumentException: Invalid character found in the request targe
 2025-07-21 15:41:50 DEBUG RequestLoggingFilter:34 - Request from IP: 0:0:0:0:0:0:0:1, method: DELETE, URI: /firestation?address=1509%Culver%St, User-Agent: curl/8.7.1
 2025-07-21 17:12:56 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
 2025-07-21 17:12:56 INFO  GracefulShutdown:76 - Graceful shutdown complete
+2025-07-21 18:40:48 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 9576 (C:\Users\Moi\IdeaProjects\MyP5_SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-21 18:40:48 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-21 18:40:52 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
+2025-07-21 18:40:52 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-21 18:40:52 INFO  StandardService:168 - Starting service [Tomcat]
+2025-07-21 18:40:52 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-21 18:40:52 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
+2025-07-21 18:40:52 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 3478 ms
+2025-07-21 18:40:54 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-21 18:40:54 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-07-21 18:40:54 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 6.782 seconds (process running for 10.185)
+2025-07-21 18:43:35 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-21 18:43:35 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-07-21 18:43:35 INFO  DispatcherServlet:554 - Completed initialization in 13 ms
+2025-07-21 18:43:35 INFO  RequestLoggingFilter:31 - URI: /firestation
+2025-07-21 18:43:35 DEBUG RequestLoggingFilter:34 - Request from IP: 0:0:0:0:0:0:0:1, method: PUT, URI: /firestation, User-Agent: PostmanRuntime/7.44.1
+2025-07-21 19:12:19 INFO  RequestLoggingFilter:31 - URI: /firestation
+2025-07-21 19:12:19 DEBUG RequestLoggingFilter:34 - Request from IP: 0:0:0:0:0:0:0:1, method: PUT, URI: /firestation, User-Agent: PostmanRuntime/7.44.1
+2025-07-21 19:13:31 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-21 19:13:31 INFO  GracefulShutdown:76 - Graceful shutdown complete

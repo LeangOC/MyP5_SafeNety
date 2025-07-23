@@ -226,6 +226,9 @@
   }, {
     "address" : "0000 Culver St",
     "station" : "3"
+  }, {
+    "address" : "00011 Culver St",
+    "station" : "3"
   } ],
   "medicalrecords" : [ {
     "firstName" : "John",

@@ -1,5 +1,4 @@
 package oc.p5.SafeNety.service;
-
 import oc.p5.SafeNety.dto.FirestationDTO;
 import oc.p5.SafeNety.model.Firestation;
 import oc.p5.SafeNety.repository.FirestationRepository;
@@ -14,13 +13,13 @@ public class FirestationService {
 
     public void addFirestation(FirestationDTO dto) {
         Firestation f = new Firestation();
-        f.setAddress(dto.getAddress());
-        f.setStation(dto.getStation());
+        f.setAddress(dto.address);
+        f.setStation(dto.station);
         repository.save(f);
     }
 
     public void updateFirestation(FirestationDTO dto) {
-        repository.update(new Firestation(dto.getAddress(), dto.getStation()));
+        repository.update(new Firestation(dto.address, dto.station));
     }
 
     public void deleteByAddress(String address) {

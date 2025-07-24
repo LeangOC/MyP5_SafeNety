@@ -1,5 +1,6 @@
 package oc.p5.SafeNety.service;
 
+import oc.p5.SafeNety.dto.PersonDTO;
 import oc.p5.SafeNety.model.Person;
 import oc.p5.SafeNety.utils.DataLoader;
 import org.springframework.stereotype.Service;
@@ -39,9 +40,8 @@ public class PersonService {
         }
     }
 
-    public void deletePerson(String firstName, String lastName) {
-        persons.removeIf(p -> p.getFirstName().equalsIgnoreCase(firstName)
-                && p.getLastName().equalsIgnoreCase(lastName));
+    public void deletePersonne(PersonDTO personDTO) {
+        persons.removeIf(f -> (f.getFirstName().equalsIgnoreCase(personDTO.firstName)) && (f.getLastName().equalsIgnoreCase(personDTO.lastName)));
         DataLoader.saveData();
     }
 }

@@ -1,5 +1,6 @@
 package oc.p5.SafeNety.controller;
 
+import oc.p5.SafeNety.dto.PersonDTO;
 import oc.p5.SafeNety.model.Person;
 import oc.p5.SafeNety.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,9 +26,10 @@ public class PersonController {
         return ResponseEntity.ok("Personne mise à jour");
     }
 
-    @DeleteMapping
-    public ResponseEntity<String> deletePerson(@RequestParam String firstName, @RequestParam String lastName) {
-        service.deletePerson(firstName, lastName);
-        return ResponseEntity.ok("Personne supprimée");
-    }
+@DeleteMapping
+public ResponseEntity<String> deleteMapping(@RequestBody PersonDTO dto) {
+    service.deletePersonne(dto);
+    return ResponseEntity.ok("Personne supprimée");
+}
+
 }

@@ -77,9 +77,12 @@
 
 - solution_9
   ### 🔹 /medicalRecord`
-| Méthode | Action                | Exemple `curl` |
-|--------|-----------------------|----------------|
-| POST   | Ajouter un mapping    | curl -X POST -H "Content-Type: application/json" -d '{"firstName": "Dupond","lastName": "BON","birthdate": "1990-01-01","medications": ["aspirin:100mg"],"allergies": ["pollen"]}' http://localhost:8080/medicalRecord |
-| PUT    | Mettre à jour         | curl -X PUT -H "Content-Type: application/json" -d '{"firstName": "Dupond","lastName": "BON","birthdate": "1990-01-01","medications": ["ibuprofen:200mg"],"allergies": ["pollen", "dust"]}' http://localhost:8080/medicalRecord|
-| DELETE | Supprimer un mapping  | curl -X DELETE "http://localhost:8080/medicalRecord?firstName=Dupond&lastName=BON"
+| Méthode | Action             | Exemple `curl` |
+|--------|--------------------|----------------|
+| POST   | Ajouter un mapping | curl -X POST -H "Content-Type: application/json" -d '{"firstName": "Dupond","lastName": "BON","birthdate": "1990-01-01","medications": ["aspirin:100mg"],"allergies": ["pollen"]}' http://localhost:8080/medicalRecord |
+| PUT    | Mettre à jour      | curl -X PUT -H "Content-Type: application/json" -d '{"firstName": "Dupond","lastName": "BON","birthdate": "1990-01-01","medications": ["ibuprofen:200mg"],"allergies": ["pollen", "dust"]}' http://localhost:8080/medicalRecord|
+| DELETE | Supprimer person   | curl -X DELETE "http://localhost:8080/medicalRecord?firstName=Dupond&lastName=BON"
 
+- solution_10
+### Passer en mode DTO pour la Méthode DELETE de l'endpoint :  /medicalRecord
+  DELETE | Supprimer person | curl -X DELETE -H "Content-Type: application/json" -d  '{"firstName": "Dupond","lastName": "BON"}' http://localhost:8080/person  

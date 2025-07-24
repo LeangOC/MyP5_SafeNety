@@ -183,6 +183,14 @@
     "zip" : "97451",
     "phone" : "841-874-7458",
     "email" : "gramps@email.com"
+  }, {
+    "firstName" : "Dupont",
+    "lastName" : "BON",
+    "address" : "15 Rue Saint Juste",
+    "city" : "IVRY",
+    "zip" : "94200",
+    "phone" : "0123456789",
+    "email" : "DupondBON@email.com"
   } ],
   "firestations" : [ {
     "address" : "29 15th St",

@@ -74,3 +74,12 @@
 | POST   | Ajouter un mapping    | `curl -X POST -H "Content-Type: application/json" -d '{"address":"1509 Culver St","station":"3"}' http://localhost:8080/firestation` |
 | PUT    | Mettre à jour         | `curl -X PUT -H "Content-Type: application/json" -d '{"address":"1509 Culver St","station":"4"}' http://localhost:8080/firestation` |
 | DELETE | Supprimer un mapping  | `curl -X DELETE "http://localhost:8080/firestation?address=1509 Culver St"` ou `?station=3` | A faire sous Postman
+
+- solution_9
+  ### 🔹 /medicalRecord`
+| Méthode | Action                | Exemple `curl` |
+|--------|-----------------------|----------------|
+| POST   | Ajouter un mapping    | curl -X POST -H "Content-Type: application/json" -d '{"firstName": "Dupond","lastName": "BON","birthdate": "1990-01-01","medications": ["aspirin:100mg"],"allergies": ["pollen"]}' http://localhost:8080/medicalRecord |
+| PUT    | Mettre à jour         | curl -X PUT -H "Content-Type: application/json" -d '{"firstName": "Dupond","lastName": "BON","birthdate": "1990-01-01","medications": ["ibuprofen:200mg"],"allergies": ["pollen", "dust"]}' http://localhost:8080/medicalRecord|
+| DELETE | Supprimer un mapping  | curl -X DELETE "http://localhost:8080/medicalRecord?firstName=Dupond&lastName=BON"
+

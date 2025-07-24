@@ -929,3 +929,21 @@ java.lang.IllegalArgumentException: Invalid character found in the request targe
 2025-07-24 15:22:39 DEBUG RequestLoggingFilter:34 - Request from IP: 0:0:0:0:0:0:0:1, method: DELETE, URI: /person, User-Agent: curl/8.7.1
 2025-07-24 15:52:07 INFO  RequestLoggingFilter:31 - URI: /person
 2025-07-24 15:52:07 DEBUG RequestLoggingFilter:34 - Request from IP: 0:0:0:0:0:0:0:1, method: DELETE, URI: /person, User-Agent: curl/8.7.1
+2025-07-24 16:04:40 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 13260 (C:\Users\Moi\IdeaProjects\MyP5_SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-24 16:04:40 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 16:04:41 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
+2025-07-24 16:04:41 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-24 16:04:41 INFO  StandardService:168 - Starting service [Tomcat]
+2025-07-24 16:04:41 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 16:04:41 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
+2025-07-24 16:04:41 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 1066 ms
+2025-07-24 16:04:41 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-24 16:04:41 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-07-24 16:04:41 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 2.142 seconds (process running for 3.141)
+2025-07-24 16:04:59 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24 16:04:59 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-07-24 16:04:59 INFO  DispatcherServlet:554 - Completed initialization in 1 ms
+2025-07-24 16:04:59 INFO  RequestLoggingFilter:31 - URI: /person
+2025-07-24 16:04:59 DEBUG RequestLoggingFilter:34 - Request from IP: 0:0:0:0:0:0:0:1, method: DELETE, URI: /person, User-Agent: PostmanRuntime/7.44.1
+2025-07-24 16:05:27 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24 16:05:27 INFO  GracefulShutdown:76 - Graceful shutdown complete

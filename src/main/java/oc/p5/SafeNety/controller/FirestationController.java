@@ -1,6 +1,6 @@
 package oc.p5.SafeNety.controller;
 
-import oc.p5.SafeNety.dto.FirestationDTO;
+import oc.p5.SafeNety.model.Firestation;
 import oc.p5.SafeNety.service.FirestationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,14 +15,14 @@ public class FirestationController {
     private FirestationService service;
 
     @PostMapping
-    public ResponseEntity<String> addMapping(@RequestBody FirestationDTO dto) {
-        service.addFirestation(dto);
+    public ResponseEntity<String> addMapping(@RequestBody Firestation firestation) {
+        service.addFirestation(firestation);
         return ResponseEntity.status(HttpStatus.CREATED).body("Mapping ajouté");
     }
 
     @PutMapping
-    public ResponseEntity<String> updateMapping(@RequestBody FirestationDTO dto) {
-        service.updateFirestation(dto);
+    public ResponseEntity<String> updateMapping(@RequestBody Firestation firestation) {
+        service.updateFirestation(firestation);
         return ResponseEntity.ok("Mapping mis à jour");
     }
 

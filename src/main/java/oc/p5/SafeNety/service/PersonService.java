@@ -1,6 +1,7 @@
 package oc.p5.SafeNety.service;
 
 import oc.p5.SafeNety.dto.PersonDTO;
+import oc.p5.SafeNety.exception.PersonNotFoundException;
 import oc.p5.SafeNety.model.Person;
 import oc.p5.SafeNety.utils.DataLoader;
 import org.springframework.stereotype.Service;
@@ -41,7 +42,11 @@ public class PersonService {
     }
 
     public void deletePersonne(PersonDTO personDTO) {
-        persons.removeIf(f -> (f.getFirstName().equalsIgnoreCase(personDTO.firstName)) && (f.getLastName().equalsIgnoreCase(personDTO.lastName)));
+        boolean removed = persons.removeIf(f -> (f.getFirstName().equalsIgnoreCase(personDTO.firstName)) && (f.getLastName().equalsIgnoreCase(personDTO.lastName)));
+
+        if (!removed) {
+            throw new PersonNotFoundException(personDTO.firstName, personDTO.lastName);
+        }
         DataLoader.saveData();
     }
 }

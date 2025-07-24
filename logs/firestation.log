@@ -947,3 +947,39 @@ java.lang.IllegalArgumentException: Invalid character found in the request targe
 2025-07-24 16:04:59 DEBUG RequestLoggingFilter:34 - Request from IP: 0:0:0:0:0:0:0:1, method: DELETE, URI: /person, User-Agent: PostmanRuntime/7.44.1
 2025-07-24 16:05:27 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
 2025-07-24 16:05:27 INFO  GracefulShutdown:76 - Graceful shutdown complete
+2025-07-24 16:47:31 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 10756 (C:\Users\Moi\IdeaProjects\MyP5_SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-24 16:47:31 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 16:47:32 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
+2025-07-24 16:47:32 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-24 16:47:32 INFO  StandardService:168 - Starting service [Tomcat]
+2025-07-24 16:47:32 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 16:47:32 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
+2025-07-24 16:47:32 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 1262 ms
+2025-07-24 16:47:32 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-24 16:47:32 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-07-24 16:47:32 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 2.389 seconds (process running for 3.358)
+2025-07-24 16:49:05 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24 16:49:05 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-07-24 16:49:05 INFO  DispatcherServlet:554 - Completed initialization in 1 ms
+2025-07-24 16:49:05 INFO  RequestLoggingFilter:31 - URI: /person
+2025-07-24 16:49:05 DEBUG RequestLoggingFilter:34 - Request from IP: 0:0:0:0:0:0:0:1, method: DELETE, URI: /person, User-Agent: PostmanRuntime/7.44.1
+2025-07-24 16:49:57 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24 16:49:57 INFO  GracefulShutdown:76 - Graceful shutdown complete
+2025-07-24 16:52:05 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 18040 (C:\Users\Moi\IdeaProjects\MyP5_SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-24 16:52:05 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-24 16:52:06 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
+2025-07-24 16:52:06 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-24 16:52:06 INFO  StandardService:168 - Starting service [Tomcat]
+2025-07-24 16:52:06 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-24 16:52:06 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
+2025-07-24 16:52:06 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 1085 ms
+2025-07-24 16:52:06 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-24 16:52:06 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-07-24 16:52:06 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 2.116 seconds (process running for 3.072)
+2025-07-24 16:52:10 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-24 16:52:10 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-07-24 16:52:10 INFO  DispatcherServlet:554 - Completed initialization in 0 ms
+2025-07-24 16:52:10 INFO  RequestLoggingFilter:31 - URI: /person
+2025-07-24 16:52:10 DEBUG RequestLoggingFilter:34 - Request from IP: 0:0:0:0:0:0:0:1, method: DELETE, URI: /person, User-Agent: PostmanRuntime/7.44.1
+2025-07-24 16:52:19 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-24 16:52:19 INFO  GracefulShutdown:76 - Graceful shutdown complete

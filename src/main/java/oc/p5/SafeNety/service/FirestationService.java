@@ -12,6 +12,11 @@ public class FirestationService {
     public FirestationService() {this.firestations = DataLoader.loadData().getFirestations();
     }
 
+    // ✅ Constructeur pour les tests
+    public FirestationService(List<Firestation> firestations) {
+        this.firestations = firestations;
+    }
+
     public void addFirestation(Firestation ajout) {
         firestations.add(ajout);
         DataLoader.saveData();

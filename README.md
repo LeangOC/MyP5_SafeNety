@@ -92,4 +92,6 @@
 DELETE | Supprimer person | curl -X DELETE -H "Content-Type: application/json" -d  '{"firstName": "Dupond","lastName": "BON"}' http://localhost:8080/person
 => Affichage : Aucune personne trouvée avec le nom : Dupond BON
 
-
+solution_12
+- ### Implémentation des Tests Junit5 Service
+- ### Rapport de couverture Jacoco = 90%

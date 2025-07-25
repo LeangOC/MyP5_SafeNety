@@ -93,3 +93,6 @@ DELETE | Supprimer person | curl -X DELETE -H "Content-Type: application/json" -
 => Affichage : Aucune personne trouvée avec le nom : Dupond BON
 
 
+- solution_12
+- ### Implémentation des Tests Junit5 et Spring Test 
+- ### Rapport de couverture Jacoco = 97%

@@ -1,13 +1,8 @@
 package oc.p5.SafeNety.filter;
 
-import jakarta.servlet.Filter;
-import jakarta.servlet.FilterChain;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.ServletRequest;
-import jakarta.servlet.ServletResponse;
-import jakarta.servlet.http.HttpServletRequest;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+import org.apache.logging.log4j.*;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
@@ -22,16 +17,24 @@ public class RequestLoggingFilter implements Filter {
             throws IOException, ServletException {
 
         HttpServletRequest req = (HttpServletRequest) request;
+        HttpServletResponse res = (HttpServletResponse) response;
 
         String method = req.getMethod();
         String uri = req.getRequestURI();
-        String queryString = req.getQueryString(); // contient stationNumber=1
+        String queryString = req.getQueryString();
         String fullUrl = (queryString != null) ? uri + "?" + queryString : uri;
         String userAgent = req.getHeader("User-Agent");
-        logger.info("URI: {}", fullUrl);
-        //logger.info("Récupération des personnes couvertes par la station {}", 2);
-        //logger.debug("HTTP {} request to '{}' from IP: {}", method, fullUrl, req.getRemoteAddr());
-        logger.debug("Request from IP: {}, method: {}, URI: {}, User-Agent: {}", req.getRemoteAddr(), req.getMethod(), fullUrl, userAgent);
-        chain.doFilter(request, response);
+
+        logger.info("Received request: {} {}", method, fullUrl);
+        logger.debug("Request details: IP={}, User-Agent={}", req.getRemoteAddr(), userAgent);
+
+        try {
+            chain.doFilter(request, response);
+            int status = res.getStatus();
+            logger.info("Response status: {} for {}", status, fullUrl);
+        } catch (Exception e) {
+            logger.error("Exception while processing request: {} {}, error: {}", method, fullUrl, e.getMessage(), e);
+            throw e;
+        }
     }
 }

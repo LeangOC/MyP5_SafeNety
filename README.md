@@ -88,6 +88,6 @@
   DELETE | Supprimer person | curl -X DELETE -H "Content-Type: application/json" -d  '{"firstName": "Dupond","lastName": "BON"}' http://localhost:8080/person  
 
 - solution_11
-### Gestion des exceptions 
+### Gestion des exceptions : Ajout PersonNotFoundException  dans le méthode deletePersonne de PersonService
 DELETE | Supprimer person   | curl -X DELETE "http://localhost:8080/medicalRecord?firstName=Dupond&lastName=BON"
 Aucune personne trouvée avec le nom : Dupond BON

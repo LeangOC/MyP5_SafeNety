@@ -84,5 +84,5 @@
 | DELETE | Supprimer person   | curl -X DELETE "http://localhost:8080/medicalRecord?firstName=Dupond&lastName=BON"
 
 - solution_10
-### Passer en mode DTO pour la Méthode DELETE de l'endpoint :  /medicalRecord
+### Passer en mode DTO pour la Méthode DELETE de l'endpoint :  /person
   DELETE | Supprimer person | curl -X DELETE -H "Content-Type: application/json" -d  '{"firstName": "Dupond","lastName": "BON"}' http://localhost:8080/person  

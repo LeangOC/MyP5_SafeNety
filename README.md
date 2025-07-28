@@ -89,5 +89,5 @@
 
 - solution_11
 ### Gestion des exceptions : Ajout PersonNotFoundException  dans le méthode deletePersonne de PersonService
-DELETE | Supprimer person   | curl -X DELETE "http://localhost:8080/medicalRecord?firstName=Dupond&lastName=BON"
+DELETE | Supprimer person   | curl -X DELETE -H "Content-Type: application/json" -d  '{"firstName": "Dupond","lastName": "BON"}' http://localhost:8080/person
 Aucune personne trouvée avec le nom : Dupond BON

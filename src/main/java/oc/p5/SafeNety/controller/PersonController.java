@@ -28,32 +28,11 @@ public class PersonController { private static final Logger logger = LogManager.
         service.updatePerson(person);
         return ResponseEntity.ok("Personne mise à jour");
     }
-/*
+
 @DeleteMapping
 public ResponseEntity<String> deleteMapping(@RequestBody PersonDTO dto) {
     service.deletePersonne(dto);
     return ResponseEntity.ok("Personne supprimée");
-} */
-@DeleteMapping
-public ResponseEntity<String> deleteMapping(@RequestBody PersonDTO dto) {
-    logger.debug("Suppression demandée pour: prénom={}, nom={}", dto.firstName, dto.lastName);
-
-    try {
-        service.deletePersonne(dto);
-        logger.info("Personne supprimée: prénom={}, nom={}", dto.firstName, dto.lastName);
-        return ResponseEntity.ok("Personne supprimée");
-    } catch (Exception e) {
-        logger.info("ERROR  {}:{} -   Échec suppression : prénom={}, nom={} ({})",
-                this.getClass().getSimpleName(),
-                new Throwable().getStackTrace()[0].getLineNumber(),
-                dto.firstName, dto.lastName, e.getMessage());
-
-        logger.error("Erreur lors de la suppression de la personne: prénom={}, nom={}, erreur={}",
-                dto.firstName, dto.lastName, e.getMessage(), e);
-        return ResponseEntity.internalServerError().body("Erreur lors de la suppression");
-    }
 }
-
-
 
 }

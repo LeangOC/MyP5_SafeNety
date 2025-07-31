@@ -100,3 +100,6 @@ Aucune personne trouvée avec le nom : Dupond BON
 solution_13
 - ### Implémentation des Spring Tests pour les contrôleurs
 - ### Rapport de couverture Jacoco = 93%
+
+Solution_14 
+-  ### Mise en place des logs (info,debug et error) en capturant les codes de retour Http

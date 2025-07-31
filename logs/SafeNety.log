@@ -1,0 +1,108 @@
+2025-07-31 09:44:15 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 4692 (C:\Users\Moi\IdeaProjects\MyP5_SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-31 09:44:15 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-31 09:44:17 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
+2025-07-31 09:44:17 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-31 09:44:17 INFO  StandardService:168 - Starting service [Tomcat]
+2025-07-31 09:44:17 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-31 09:44:17 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
+2025-07-31 09:44:17 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 1288 ms
+2025-07-31 09:44:17 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-31 09:44:17 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-07-31 09:44:17 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 2.425 seconds (process running for 3.379)
+2025-07-31 09:44:36 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-31 09:44:36 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-07-31 09:44:36 INFO  DispatcherServlet:554 - Completed initialization in 0 ms
+2025-07-31 09:44:36 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:0:0:0:0:0:0:0:1,Méthode:POST,URI:/person,User-Agent:PostmanRuntime/7.44.1
+2025-07-31 09:44:37 INFO  RequestLoggingFilter:42 - ✅Requête réussie [POST/person]-Code HTTP:201
+2025-07-31 09:45:01 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:0:0:0:0:0:0:0:1,Méthode:DELETE,URI:/person,User-Agent:PostmanRuntime/7.44.1
+2025-07-31 09:45:01 INFO  RequestLoggingFilter:42 - ✅Requête réussie [DELETE/person]-Code HTTP:200
+2025-07-31 09:46:32 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:0:0:0:0:0:0:0:1,Méthode:DELETE,URI:/person,User-Agent:PostmanRuntime/7.44.1
+2025-07-31 09:46:32 ERROR RequestLoggingFilter:50 - ❌Erreur[DELETE/person]-CodeHTTP:404
+2025-07-31 09:47:42 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31 09:47:42 INFO  GracefulShutdown:76 - Graceful shutdown complete
+2025-07-31 09:49:00 INFO  AnnotationConfigContextLoaderUtils:83 - Could not detect default configuration classes for test class [oc.p5.SafeNety.controller.AlertControllerTest]: AlertControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-31 09:49:00 INFO  SpringBootTestContextBootstrapper:234 - Found @SpringBootConfiguration oc.p5.SafeNety.SafeNetyApplication for test class oc.p5.SafeNety.controller.AlertControllerTest
+2025-07-31 09:49:01 INFO  AlertControllerTest:53 - Starting AlertControllerTest using Java 21.0.6 with PID 24172 (started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-31 09:49:01 INFO  AlertControllerTest:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-31 09:49:04 INFO  SpringBootMockServletContext:440 - Initializing Spring TestDispatcherServlet ''
+2025-07-31 09:49:04 INFO  TestDispatcherServlet:532 - Initializing Servlet ''
+2025-07-31 09:49:04 INFO  TestDispatcherServlet:554 - Completed initialization in 3 ms
+2025-07-31 09:49:04 INFO  AlertControllerTest:59 - Started AlertControllerTest in 3.752 seconds (process running for 6.837)
+2025-07-31 09:49:04 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:GET,URI:/personInfo,User-Agent:null
+2025-07-31 09:49:05 INFO  RequestLoggingFilter:42 - ✅Requête réussie [GET/personInfo]-Code HTTP:200
+2025-07-31 09:49:05 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:GET,URI:/childAlert,User-Agent:null
+2025-07-31 09:49:05 INFO  RequestLoggingFilter:42 - ✅Requête réussie [GET/childAlert]-Code HTTP:200
+2025-07-31 09:49:05 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:GET,URI:/communityEmail,User-Agent:null
+2025-07-31 09:49:05 INFO  RequestLoggingFilter:42 - ✅Requête réussie [GET/communityEmail]-Code HTTP:200
+2025-07-31 09:49:05 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:GET,URI:/flood/stations,User-Agent:null
+2025-07-31 09:49:05 INFO  RequestLoggingFilter:42 - ✅Requête réussie [GET/flood/stations]-Code HTTP:200
+2025-07-31 09:49:05 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:GET,URI:/fire,User-Agent:null
+2025-07-31 09:49:05 INFO  RequestLoggingFilter:42 - ✅Requête réussie [GET/fire]-Code HTTP:200
+2025-07-31 09:49:05 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:GET,URI:/phoneAlert,User-Agent:null
+2025-07-31 09:49:05 INFO  RequestLoggingFilter:42 - ✅Requête réussie [GET/phoneAlert]-Code HTTP:200
+2025-07-31 09:49:05 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:GET,URI:/firestation,User-Agent:null
+2025-07-31 09:49:05 INFO  RequestLoggingFilter:42 - ✅Requête réussie [GET/firestation]-Code HTTP:200
+2025-07-31 09:49:05 INFO  AnnotationConfigContextLoaderUtils:83 - Could not detect default configuration classes for test class [oc.p5.SafeNety.controller.FirestationControllerTest]: FirestationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-31 09:49:05 INFO  SpringBootTestContextBootstrapper:234 - Found @SpringBootConfiguration oc.p5.SafeNety.SafeNetyApplication for test class oc.p5.SafeNety.controller.FirestationControllerTest
+2025-07-31 09:49:05 INFO  FirestationControllerTest:53 - Starting FirestationControllerTest using Java 21.0.6 with PID 24172 (started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-31 09:49:05 INFO  FirestationControllerTest:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-31 09:49:05 INFO  SpringBootMockServletContext:440 - Initializing Spring TestDispatcherServlet ''
+2025-07-31 09:49:05 INFO  TestDispatcherServlet:532 - Initializing Servlet ''
+2025-07-31 09:49:05 INFO  TestDispatcherServlet:554 - Completed initialization in 1 ms
+2025-07-31 09:49:05 INFO  FirestationControllerTest:59 - Started FirestationControllerTest in 0.46 seconds (process running for 8.053)
+2025-07-31 09:49:05 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:DELETE,URI:/firestation,User-Agent:null
+2025-07-31 09:49:05 INFO  RequestLoggingFilter:42 - ✅Requête réussie [DELETE/firestation]-Code HTTP:200
+2025-07-31 09:49:05 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:DELETE,URI:/firestation,User-Agent:null
+2025-07-31 09:49:05 INFO  RequestLoggingFilter:42 - ✅Requête réussie [DELETE/firestation]-Code HTTP:200
+2025-07-31 09:49:06 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:PUT,URI:/firestation,User-Agent:null
+2025-07-31 09:49:06 INFO  RequestLoggingFilter:42 - ✅Requête réussie [PUT/firestation]-Code HTTP:200
+2025-07-31 09:49:06 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:DELETE,URI:/firestation,User-Agent:null
+2025-07-31 09:49:06 ERROR RequestLoggingFilter:50 - ❌Erreur[DELETE/firestation]-CodeHTTP:400
+2025-07-31 09:49:06 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:POST,URI:/firestation,User-Agent:null
+2025-07-31 09:49:06 INFO  RequestLoggingFilter:42 - ✅Requête réussie [POST/firestation]-Code HTTP:201
+2025-07-31 09:49:06 INFO  AnnotationConfigContextLoaderUtils:83 - Could not detect default configuration classes for test class [oc.p5.SafeNety.controller.MedicalRecordControllerTest]: MedicalRecordControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-31 09:49:06 INFO  SpringBootTestContextBootstrapper:234 - Found @SpringBootConfiguration oc.p5.SafeNety.SafeNetyApplication for test class oc.p5.SafeNety.controller.MedicalRecordControllerTest
+2025-07-31 09:49:06 INFO  MedicalRecordControllerTest:53 - Starting MedicalRecordControllerTest using Java 21.0.6 with PID 24172 (started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-31 09:49:06 INFO  MedicalRecordControllerTest:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-31 09:49:06 INFO  SpringBootMockServletContext:440 - Initializing Spring TestDispatcherServlet ''
+2025-07-31 09:49:06 INFO  TestDispatcherServlet:532 - Initializing Servlet ''
+2025-07-31 09:49:06 INFO  TestDispatcherServlet:554 - Completed initialization in 1 ms
+2025-07-31 09:49:06 INFO  MedicalRecordControllerTest:59 - Started MedicalRecordControllerTest in 0.44 seconds (process running for 8.717)
+2025-07-31 09:49:06 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:PUT,URI:/medicalRecord,User-Agent:null
+2025-07-31 09:49:06 INFO  RequestLoggingFilter:42 - ✅Requête réussie [PUT/medicalRecord]-Code HTTP:200
+2025-07-31 09:49:06 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:DELETE,URI:/medicalRecord,User-Agent:null
+2025-07-31 09:49:06 INFO  RequestLoggingFilter:42 - ✅Requête réussie [DELETE/medicalRecord]-Code HTTP:200
+2025-07-31 09:49:06 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:POST,URI:/medicalRecord,User-Agent:null
+2025-07-31 09:49:06 INFO  RequestLoggingFilter:42 - ✅Requête réussie [POST/medicalRecord]-Code HTTP:201
+2025-07-31 09:49:06 INFO  AnnotationConfigContextLoaderUtils:83 - Could not detect default configuration classes for test class [oc.p5.SafeNety.controller.PersonControllerTest]: PersonControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-31 09:49:06 INFO  SpringBootTestContextBootstrapper:234 - Found @SpringBootConfiguration oc.p5.SafeNety.SafeNetyApplication for test class oc.p5.SafeNety.controller.PersonControllerTest
+2025-07-31 09:49:06 INFO  PersonControllerTest:53 - Starting PersonControllerTest using Java 21.0.6 with PID 24172 (started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-31 09:49:06 INFO  PersonControllerTest:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-31 09:49:07 INFO  SpringBootMockServletContext:440 - Initializing Spring TestDispatcherServlet ''
+2025-07-31 09:49:07 INFO  TestDispatcherServlet:532 - Initializing Servlet ''
+2025-07-31 09:49:07 INFO  TestDispatcherServlet:554 - Completed initialization in 1 ms
+2025-07-31 09:49:07 INFO  PersonControllerTest:59 - Started PersonControllerTest in 0.421 seconds (process running for 9.255)
+2025-07-31 09:49:07 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:PUT,URI:/person,User-Agent:null
+2025-07-31 09:49:07 INFO  RequestLoggingFilter:42 - ✅Requête réussie [PUT/person]-Code HTTP:200
+2025-07-31 09:49:07 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:DELETE,URI:/person,User-Agent:null
+2025-07-31 09:49:07 INFO  RequestLoggingFilter:42 - ✅Requête réussie [DELETE/person]-Code HTTP:200
+2025-07-31 09:49:07 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:POST,URI:/person,User-Agent:null
+2025-07-31 09:49:07 INFO  RequestLoggingFilter:42 - ✅Requête réussie [POST/person]-Code HTTP:201
+2025-07-31 09:49:07 INFO  AnnotationConfigContextLoaderUtils:83 - Could not detect default configuration classes for test class [oc.p5.SafeNety.SafeNetyApplicationTests]: SafeNetyApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-07-31 09:49:07 INFO  SpringBootTestContextBootstrapper:234 - Found @SpringBootConfiguration oc.p5.SafeNety.SafeNetyApplication for test class oc.p5.SafeNety.SafeNetyApplicationTests
+2025-07-31 09:49:07 INFO  SafeNetyApplicationTests:53 - Starting SafeNetyApplicationTests using Java 21.0.6 with PID 24172 (started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-31 09:49:07 INFO  SafeNetyApplicationTests:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-31 09:49:08 INFO  SafeNetyApplicationTests:59 - Started SafeNetyApplicationTests in 0.764 seconds (process running for 10.116)
+2025-07-31 09:49:08 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 24172 (started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-07-31 09:49:08 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-07-31 09:49:08 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
+2025-07-31 09:49:08 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-07-31 09:49:08 INFO  StandardService:168 - Starting service [Tomcat]
+2025-07-31 09:49:08 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-07-31 09:49:08 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
+2025-07-31 09:49:08 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 652 ms
+2025-07-31 09:49:08 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-07-31 09:49:08 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-07-31 09:49:08 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 0.962 seconds (process running for 11.086)
+2025-07-31 09:49:09 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-31 09:49:09 INFO  GracefulShutdown:76 - Graceful shutdown complete

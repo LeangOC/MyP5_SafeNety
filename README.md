@@ -103,3 +103,6 @@ solution_13
 
 Solution_14 
 -  ### Mise en place des logs (info,debug et error) en capturant les codes de retour Http
+
+Solution_15
+### logs avec récupération des corps de requêtes

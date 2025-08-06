@@ -1,108 +1,111 @@
-2025-07-31 09:44:15 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 4692 (C:\Users\Moi\IdeaProjects\MyP5_SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
-2025-07-31 09:44:15 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
-2025-07-31 09:44:17 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
-2025-07-31 09:44:17 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
-2025-07-31 09:44:17 INFO  StandardService:168 - Starting service [Tomcat]
-2025-07-31 09:44:17 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-07-31 09:44:17 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
-2025-07-31 09:44:17 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 1288 ms
-2025-07-31 09:44:17 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
-2025-07-31 09:44:17 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
-2025-07-31 09:44:17 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 2.425 seconds (process running for 3.379)
-2025-07-31 09:44:36 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-07-31 09:44:36 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
-2025-07-31 09:44:36 INFO  DispatcherServlet:554 - Completed initialization in 0 ms
-2025-07-31 09:44:36 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:0:0:0:0:0:0:0:1,Méthode:POST,URI:/person,User-Agent:PostmanRuntime/7.44.1
-2025-07-31 09:44:37 INFO  RequestLoggingFilter:42 - ✅Requête réussie [POST/person]-Code HTTP:201
-2025-07-31 09:45:01 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:0:0:0:0:0:0:0:1,Méthode:DELETE,URI:/person,User-Agent:PostmanRuntime/7.44.1
-2025-07-31 09:45:01 INFO  RequestLoggingFilter:42 - ✅Requête réussie [DELETE/person]-Code HTTP:200
-2025-07-31 09:46:32 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:0:0:0:0:0:0:0:1,Méthode:DELETE,URI:/person,User-Agent:PostmanRuntime/7.44.1
-2025-07-31 09:46:32 ERROR RequestLoggingFilter:50 - ❌Erreur[DELETE/person]-CodeHTTP:404
-2025-07-31 09:47:42 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-31 09:47:42 INFO  GracefulShutdown:76 - Graceful shutdown complete
-2025-07-31 09:49:00 INFO  AnnotationConfigContextLoaderUtils:83 - Could not detect default configuration classes for test class [oc.p5.SafeNety.controller.AlertControllerTest]: AlertControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-07-31 09:49:00 INFO  SpringBootTestContextBootstrapper:234 - Found @SpringBootConfiguration oc.p5.SafeNety.SafeNetyApplication for test class oc.p5.SafeNety.controller.AlertControllerTest
-2025-07-31 09:49:01 INFO  AlertControllerTest:53 - Starting AlertControllerTest using Java 21.0.6 with PID 24172 (started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
-2025-07-31 09:49:01 INFO  AlertControllerTest:652 - No active profile set, falling back to 1 default profile: "default"
-2025-07-31 09:49:04 INFO  SpringBootMockServletContext:440 - Initializing Spring TestDispatcherServlet ''
-2025-07-31 09:49:04 INFO  TestDispatcherServlet:532 - Initializing Servlet ''
-2025-07-31 09:49:04 INFO  TestDispatcherServlet:554 - Completed initialization in 3 ms
-2025-07-31 09:49:04 INFO  AlertControllerTest:59 - Started AlertControllerTest in 3.752 seconds (process running for 6.837)
-2025-07-31 09:49:04 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:GET,URI:/personInfo,User-Agent:null
-2025-07-31 09:49:05 INFO  RequestLoggingFilter:42 - ✅Requête réussie [GET/personInfo]-Code HTTP:200
-2025-07-31 09:49:05 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:GET,URI:/childAlert,User-Agent:null
-2025-07-31 09:49:05 INFO  RequestLoggingFilter:42 - ✅Requête réussie [GET/childAlert]-Code HTTP:200
-2025-07-31 09:49:05 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:GET,URI:/communityEmail,User-Agent:null
-2025-07-31 09:49:05 INFO  RequestLoggingFilter:42 - ✅Requête réussie [GET/communityEmail]-Code HTTP:200
-2025-07-31 09:49:05 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:GET,URI:/flood/stations,User-Agent:null
-2025-07-31 09:49:05 INFO  RequestLoggingFilter:42 - ✅Requête réussie [GET/flood/stations]-Code HTTP:200
-2025-07-31 09:49:05 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:GET,URI:/fire,User-Agent:null
-2025-07-31 09:49:05 INFO  RequestLoggingFilter:42 - ✅Requête réussie [GET/fire]-Code HTTP:200
-2025-07-31 09:49:05 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:GET,URI:/phoneAlert,User-Agent:null
-2025-07-31 09:49:05 INFO  RequestLoggingFilter:42 - ✅Requête réussie [GET/phoneAlert]-Code HTTP:200
-2025-07-31 09:49:05 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:GET,URI:/firestation,User-Agent:null
-2025-07-31 09:49:05 INFO  RequestLoggingFilter:42 - ✅Requête réussie [GET/firestation]-Code HTTP:200
-2025-07-31 09:49:05 INFO  AnnotationConfigContextLoaderUtils:83 - Could not detect default configuration classes for test class [oc.p5.SafeNety.controller.FirestationControllerTest]: FirestationControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-07-31 09:49:05 INFO  SpringBootTestContextBootstrapper:234 - Found @SpringBootConfiguration oc.p5.SafeNety.SafeNetyApplication for test class oc.p5.SafeNety.controller.FirestationControllerTest
-2025-07-31 09:49:05 INFO  FirestationControllerTest:53 - Starting FirestationControllerTest using Java 21.0.6 with PID 24172 (started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
-2025-07-31 09:49:05 INFO  FirestationControllerTest:652 - No active profile set, falling back to 1 default profile: "default"
-2025-07-31 09:49:05 INFO  SpringBootMockServletContext:440 - Initializing Spring TestDispatcherServlet ''
-2025-07-31 09:49:05 INFO  TestDispatcherServlet:532 - Initializing Servlet ''
-2025-07-31 09:49:05 INFO  TestDispatcherServlet:554 - Completed initialization in 1 ms
-2025-07-31 09:49:05 INFO  FirestationControllerTest:59 - Started FirestationControllerTest in 0.46 seconds (process running for 8.053)
-2025-07-31 09:49:05 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:DELETE,URI:/firestation,User-Agent:null
-2025-07-31 09:49:05 INFO  RequestLoggingFilter:42 - ✅Requête réussie [DELETE/firestation]-Code HTTP:200
-2025-07-31 09:49:05 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:DELETE,URI:/firestation,User-Agent:null
-2025-07-31 09:49:05 INFO  RequestLoggingFilter:42 - ✅Requête réussie [DELETE/firestation]-Code HTTP:200
-2025-07-31 09:49:06 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:PUT,URI:/firestation,User-Agent:null
-2025-07-31 09:49:06 INFO  RequestLoggingFilter:42 - ✅Requête réussie [PUT/firestation]-Code HTTP:200
-2025-07-31 09:49:06 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:DELETE,URI:/firestation,User-Agent:null
-2025-07-31 09:49:06 ERROR RequestLoggingFilter:50 - ❌Erreur[DELETE/firestation]-CodeHTTP:400
-2025-07-31 09:49:06 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:POST,URI:/firestation,User-Agent:null
-2025-07-31 09:49:06 INFO  RequestLoggingFilter:42 - ✅Requête réussie [POST/firestation]-Code HTTP:201
-2025-07-31 09:49:06 INFO  AnnotationConfigContextLoaderUtils:83 - Could not detect default configuration classes for test class [oc.p5.SafeNety.controller.MedicalRecordControllerTest]: MedicalRecordControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-07-31 09:49:06 INFO  SpringBootTestContextBootstrapper:234 - Found @SpringBootConfiguration oc.p5.SafeNety.SafeNetyApplication for test class oc.p5.SafeNety.controller.MedicalRecordControllerTest
-2025-07-31 09:49:06 INFO  MedicalRecordControllerTest:53 - Starting MedicalRecordControllerTest using Java 21.0.6 with PID 24172 (started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
-2025-07-31 09:49:06 INFO  MedicalRecordControllerTest:652 - No active profile set, falling back to 1 default profile: "default"
-2025-07-31 09:49:06 INFO  SpringBootMockServletContext:440 - Initializing Spring TestDispatcherServlet ''
-2025-07-31 09:49:06 INFO  TestDispatcherServlet:532 - Initializing Servlet ''
-2025-07-31 09:49:06 INFO  TestDispatcherServlet:554 - Completed initialization in 1 ms
-2025-07-31 09:49:06 INFO  MedicalRecordControllerTest:59 - Started MedicalRecordControllerTest in 0.44 seconds (process running for 8.717)
-2025-07-31 09:49:06 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:PUT,URI:/medicalRecord,User-Agent:null
-2025-07-31 09:49:06 INFO  RequestLoggingFilter:42 - ✅Requête réussie [PUT/medicalRecord]-Code HTTP:200
-2025-07-31 09:49:06 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:DELETE,URI:/medicalRecord,User-Agent:null
-2025-07-31 09:49:06 INFO  RequestLoggingFilter:42 - ✅Requête réussie [DELETE/medicalRecord]-Code HTTP:200
-2025-07-31 09:49:06 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:POST,URI:/medicalRecord,User-Agent:null
-2025-07-31 09:49:06 INFO  RequestLoggingFilter:42 - ✅Requête réussie [POST/medicalRecord]-Code HTTP:201
-2025-07-31 09:49:06 INFO  AnnotationConfigContextLoaderUtils:83 - Could not detect default configuration classes for test class [oc.p5.SafeNety.controller.PersonControllerTest]: PersonControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-07-31 09:49:06 INFO  SpringBootTestContextBootstrapper:234 - Found @SpringBootConfiguration oc.p5.SafeNety.SafeNetyApplication for test class oc.p5.SafeNety.controller.PersonControllerTest
-2025-07-31 09:49:06 INFO  PersonControllerTest:53 - Starting PersonControllerTest using Java 21.0.6 with PID 24172 (started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
-2025-07-31 09:49:06 INFO  PersonControllerTest:652 - No active profile set, falling back to 1 default profile: "default"
-2025-07-31 09:49:07 INFO  SpringBootMockServletContext:440 - Initializing Spring TestDispatcherServlet ''
-2025-07-31 09:49:07 INFO  TestDispatcherServlet:532 - Initializing Servlet ''
-2025-07-31 09:49:07 INFO  TestDispatcherServlet:554 - Completed initialization in 1 ms
-2025-07-31 09:49:07 INFO  PersonControllerTest:59 - Started PersonControllerTest in 0.421 seconds (process running for 9.255)
-2025-07-31 09:49:07 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:PUT,URI:/person,User-Agent:null
-2025-07-31 09:49:07 INFO  RequestLoggingFilter:42 - ✅Requête réussie [PUT/person]-Code HTTP:200
-2025-07-31 09:49:07 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:DELETE,URI:/person,User-Agent:null
-2025-07-31 09:49:07 INFO  RequestLoggingFilter:42 - ✅Requête réussie [DELETE/person]-Code HTTP:200
-2025-07-31 09:49:07 DEBUG RequestLoggingFilter:32 - ➡️Requête reçue | IP:127.0.0.1,Méthode:POST,URI:/person,User-Agent:null
-2025-07-31 09:49:07 INFO  RequestLoggingFilter:42 - ✅Requête réussie [POST/person]-Code HTTP:201
-2025-07-31 09:49:07 INFO  AnnotationConfigContextLoaderUtils:83 - Could not detect default configuration classes for test class [oc.p5.SafeNety.SafeNetyApplicationTests]: SafeNetyApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-07-31 09:49:07 INFO  SpringBootTestContextBootstrapper:234 - Found @SpringBootConfiguration oc.p5.SafeNety.SafeNetyApplication for test class oc.p5.SafeNety.SafeNetyApplicationTests
-2025-07-31 09:49:07 INFO  SafeNetyApplicationTests:53 - Starting SafeNetyApplicationTests using Java 21.0.6 with PID 24172 (started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
-2025-07-31 09:49:07 INFO  SafeNetyApplicationTests:652 - No active profile set, falling back to 1 default profile: "default"
-2025-07-31 09:49:08 INFO  SafeNetyApplicationTests:59 - Started SafeNetyApplicationTests in 0.764 seconds (process running for 10.116)
-2025-07-31 09:49:08 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 24172 (started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
-2025-07-31 09:49:08 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
-2025-07-31 09:49:08 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
-2025-07-31 09:49:08 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
-2025-07-31 09:49:08 INFO  StandardService:168 - Starting service [Tomcat]
-2025-07-31 09:49:08 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
-2025-07-31 09:49:08 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
-2025-07-31 09:49:08 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 652 ms
-2025-07-31 09:49:08 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
-2025-07-31 09:49:08 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
-2025-07-31 09:49:08 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 0.962 seconds (process running for 11.086)
-2025-07-31 09:49:09 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
-2025-07-31 09:49:09 INFO  GracefulShutdown:76 - Graceful shutdown complete
+2025-08-05 14:48:26 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 14496 (C:\Users\Moi\IdeaProjects\MyP5_SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-08-05 14:48:26 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-08-05 14:48:27 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
+2025-08-05 14:48:27 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-05 14:48:27 INFO  StandardService:168 - Starting service [Tomcat]
+2025-08-05 14:48:27 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-05 14:48:27 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
+2025-08-05 14:48:27 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 1057 ms
+2025-08-05 14:48:27 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-08-05 14:48:27 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-08-05 14:48:27 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 2.141 seconds (process running for 3.038)
+2025-08-05 14:48:30 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-05 14:48:30 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-08-05 14:48:30 INFO  DispatcherServlet:554 - Completed initialization in 2 ms
+2025-08-05 14:48:30 DEBUG RequestLoggingFilter:35 - ➡️Requête reçue | IP:0:0:0:0:0:0:0:1,Méthode:POST,URI:/person,User-Agent:PostmanRuntime/7.44.1
+2025-08-05 14:48:30 WARN  DefaultHandlerExceptionResolver:254 - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.String> oc.p5.SafeNety.controller.PersonController.addPerson(oc.p5.SafeNety.model.Person)]
+2025-08-05 14:48:30 ERROR RequestLoggingFilter:54 - ❌Erreur[POST/person]-CodeHTTP:400
+2025-08-05 14:52:59 DEBUG RequestLoggingFilter:35 - ➡️Requête reçue | IP:0:0:0:0:0:0:0:1,Méthode:POST,URI:/person,User-Agent:PostmanRuntime/7.44.1
+2025-08-05 14:52:59 WARN  DefaultHandlerExceptionResolver:254 - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.String> oc.p5.SafeNety.controller.PersonController.addPerson(oc.p5.SafeNety.model.Person)]
+2025-08-05 14:52:59 ERROR RequestLoggingFilter:54 - ❌Erreur[POST/person]-CodeHTTP:400
+2025-08-05 14:59:19 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-05 14:59:19 INFO  GracefulShutdown:76 - Graceful shutdown complete
+2025-08-05 14:59:33 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 2288 (C:\Users\Moi\IdeaProjects\MyP5_SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-08-05 14:59:33 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-08-05 14:59:34 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
+2025-08-05 14:59:34 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-05 14:59:34 INFO  StandardService:168 - Starting service [Tomcat]
+2025-08-05 14:59:34 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-05 14:59:34 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
+2025-08-05 14:59:34 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 1077 ms
+2025-08-05 14:59:35 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-08-05 14:59:35 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-08-05 14:59:35 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 2.221 seconds (process running for 3.159)
+2025-08-05 14:59:39 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-05 14:59:39 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-08-05 14:59:39 INFO  DispatcherServlet:554 - Completed initialization in 2 ms
+2025-08-05 14:59:39 DEBUG RequestLoggingFilter:42 - ➡️ Requête reçue | IP: 0:0:0:0:0:0:0:1, Méthode: POST, URI: /person, User-Agent: PostmanRuntime/7.44.1, Corps: {"firstName":"Dupond", "lastName":"BON", "address":"12 Rue Saint Juste", "city":"IVRY", "zip":"94200", "phone":"0123456789", "email":"DupondBON@email.com"}
+2025-08-05 14:59:39 WARN  DefaultHandlerExceptionResolver:254 - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<java.lang.String> oc.p5.SafeNety.controller.PersonController.addPerson(oc.p5.SafeNety.model.Person)]
+2025-08-05 14:59:39 ERROR RequestLoggingFilter:64 - ❌Erreur[POST/person]-CodeHTTP:400
+2025-08-05 15:00:07 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-05 15:00:07 INFO  GracefulShutdown:76 - Graceful shutdown complete
+2025-08-05 15:00:13 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 8248 (C:\Users\Moi\IdeaProjects\MyP5_SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-08-05 15:00:14 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-08-05 15:00:15 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
+2025-08-05 15:00:15 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-05 15:00:15 INFO  StandardService:168 - Starting service [Tomcat]
+2025-08-05 15:00:15 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-05 15:00:15 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
+2025-08-05 15:00:15 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 1050 ms
+2025-08-05 15:00:15 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-08-05 15:00:15 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-08-05 15:00:15 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 2.141 seconds (process running for 3.132)
+2025-08-05 15:00:20 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-05 15:00:20 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-08-05 15:00:20 INFO  DispatcherServlet:554 - Completed initialization in 3 ms
+2025-08-05 15:00:20 INFO  RequestLoggingFilter:56 - ✅Requête réussie [POST/person]-Code HTTP:201
+2025-08-05 15:36:49 INFO  RequestLoggingFilter:56 - ✅Requête réussie [POST/person]-Code HTTP:201
+2025-08-05 15:38:16 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-05 15:38:16 INFO  GracefulShutdown:76 - Graceful shutdown complete
+2025-08-05 16:19:17 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 6620 (C:\Users\Moi\IdeaProjects\MyP5_SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-08-05 16:19:17 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-08-05 16:19:18 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
+2025-08-05 16:19:18 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-05 16:19:18 INFO  StandardService:168 - Starting service [Tomcat]
+2025-08-05 16:19:18 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-05 16:19:18 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
+2025-08-05 16:19:18 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 1040 ms
+2025-08-05 16:19:19 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-08-05 16:19:19 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-08-05 16:19:19 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 2.081 seconds (process running for 3.21)
+2025-08-05 16:19:48 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-05 16:19:48 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-08-05 16:19:48 INFO  DispatcherServlet:554 - Completed initialization in 0 ms
+2025-08-05 16:19:48 DEBUG RequestLoggingFilter:51 - ➡️ Requête reçue | IP: 0:0:0:0:0:0:0:1, Méthode: DELETE, URI: /person, User-Agent: PostmanRuntime/7.44.1, firstName: Dupond, lastName: BON
+2025-08-05 16:19:48 INFO  RequestLoggingFilter:69 - ✅ Requête réussie [DELETE/person] - Code HTTP: 200
+2025-08-05 16:19:54 DEBUG RequestLoggingFilter:51 - ➡️ Requête reçue | IP: 0:0:0:0:0:0:0:1, Méthode: DELETE, URI: /person, User-Agent: PostmanRuntime/7.44.1, firstName: Dupond, lastName: BON
+2025-08-05 16:19:54 ERROR RequestLoggingFilter:71 - ❌ Erreur [DELETE/person] - Code HTTP: 404
+2025-08-05 16:20:21 DEBUG RequestLoggingFilter:51 - ➡️ Requête reçue | IP: 0:0:0:0:0:0:0:1, Méthode: POST, URI: /person, User-Agent: PostmanRuntime/7.44.1, firstName: Dupond, lastName: BON
+2025-08-05 16:20:21 INFO  RequestLoggingFilter:69 - ✅ Requête réussie [POST/person] - Code HTTP: 201
+2025-08-05 16:21:49 DEBUG RequestLoggingFilter:51 - ➡️ Requête reçue | IP: 0:0:0:0:0:0:0:1, Méthode: DELETE, URI: /person, User-Agent: PostmanRuntime/7.44.1, firstName: Dupond, lastName: BON
+2025-08-05 16:21:49 INFO  RequestLoggingFilter:69 - ✅ Requête réussie [DELETE/person] - Code HTTP: 200
+2025-08-05 16:21:53 DEBUG RequestLoggingFilter:51 - ➡️ Requête reçue | IP: 0:0:0:0:0:0:0:1, Méthode: DELETE, URI: /person, User-Agent: PostmanRuntime/7.44.1, firstName: Dupond, lastName: BON
+2025-08-05 16:21:53 ERROR RequestLoggingFilter:71 - ❌ Erreur [DELETE/person] - Code HTTP: 404
+2025-08-05 16:24:00 DEBUG RequestLoggingFilter:51 - ➡️ Requête reçue | IP: 0:0:0:0:0:0:0:1, Méthode: POST, URI: /firestation, User-Agent: PostmanRuntime/7.44.1, firstName: , lastName: 
+2025-08-05 16:24:00 INFO  RequestLoggingFilter:69 - ✅ Requête réussie [POST/firestation] - Code HTTP: 201
+2025-08-05 16:31:14 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-05 16:31:14 INFO  GracefulShutdown:76 - Graceful shutdown complete
+2025-08-05 16:31:42 INFO  SafeNetyApplication:53 - Starting SafeNetyApplication using Java 21.0.6 with PID 20404 (C:\Users\Moi\IdeaProjects\MyP5_SafeNety\target\classes started by Moi in C:\Users\Moi\IdeaProjects\MyP5_SafeNety)
+2025-08-05 16:31:42 INFO  SafeNetyApplication:652 - No active profile set, falling back to 1 default profile: "default"
+2025-08-05 16:31:43 INFO  TomcatWebServer:111 - Tomcat initialized with port 8080 (http)
+2025-08-05 16:31:43 INFO  Http11NioProtocol:168 - Initializing ProtocolHandler ["http-nio-8080"]
+2025-08-05 16:31:43 INFO  StandardService:168 - Starting service [Tomcat]
+2025-08-05 16:31:43 INFO  StandardEngine:168 - Starting Servlet engine: [Apache Tomcat/10.1.42]
+2025-08-05 16:31:43 INFO  [/]:168 - Initializing Spring embedded WebApplicationContext
+2025-08-05 16:31:43 INFO  ServletWebServerApplicationContext:301 - Root WebApplicationContext: initialization completed in 1158 ms
+2025-08-05 16:31:44 INFO  Http11NioProtocol:168 - Starting ProtocolHandler ["http-nio-8080"]
+2025-08-05 16:31:44 INFO  TomcatWebServer:243 - Tomcat started on port 8080 (http) with context path '/'
+2025-08-05 16:31:44 INFO  SafeNetyApplication:59 - Started SafeNetyApplication in 2.292 seconds (process running for 3.342)
+2025-08-05 16:31:53 INFO  [/]:168 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-05 16:31:53 INFO  DispatcherServlet:532 - Initializing Servlet 'dispatcherServlet'
+2025-08-05 16:31:53 INFO  DispatcherServlet:554 - Completed initialization in 0 ms
+2025-08-05 16:31:53 DEBUG RequestLoggingFilter:47 - ➡️ Requête reçue | IP: 0:0:0:0:0:0:0:1, Méthode: POST, URI: /firestation, User-Agent: PostmanRuntime/7.44.1, Corps:  {"address" : "123 Test St","station" : "7"}
+2025-08-05 16:31:53 INFO  RequestLoggingFilter:61 - ✅ Requête réussie [POST/firestation] - Code HTTP: 201
+2025-08-05 16:32:34 DEBUG RequestLoggingFilter:47 - ➡️ Requête reçue | IP: 0:0:0:0:0:0:0:1, Méthode: POST, URI: /person, User-Agent: PostmanRuntime/7.44.1, Corps: {"firstName":"Dupond", "lastName":"BON", "address":"12 Rue Saint Juste", "city":"IVRY", "zip":"94200", "phone":"0123456789", "email":"DupondBON@email.com"}
+2025-08-05 16:32:34 INFO  RequestLoggingFilter:61 - ✅ Requête réussie [POST/person] - Code HTTP: 201
+2025-08-05 16:33:26 DEBUG RequestLoggingFilter:47 - ➡️ Requête reçue | IP: 0:0:0:0:0:0:0:1, Méthode: DELETE, URI: /person, User-Agent: PostmanRuntime/7.44.1, Corps: {"firstName": "Dupond","lastName": "BON"}
+2025-08-05 16:33:26 INFO  RequestLoggingFilter:61 - ✅ Requête réussie [DELETE/person] - Code HTTP: 200
+2025-08-05 16:34:28 DEBUG RequestLoggingFilter:47 - ➡️ Requête reçue | IP: 0:0:0:0:0:0:0:1, Méthode: DELETE, URI: /person, User-Agent: PostmanRuntime/7.44.1, Corps: {"firstName": "Dupond","lastName": "BON"}
+2025-08-05 16:34:28 ERROR RequestLoggingFilter:63 - ❌ Erreur [DELETE/person] - Code HTTP: 404
+2025-08-06 09:52:16 INFO  GracefulShutdown:54 - Commencing graceful shutdown. Waiting for active requests to complete
+2025-08-06 09:52:16 INFO  GracefulShutdown:76 - Graceful shutdown complete

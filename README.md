@@ -106,3 +106,6 @@ Solution_14
 
 Solution_15
 ### logs avec récupération des corps de requêtes
+
+Solution_16
+### Ajout Plugin "maven-surefire-report-plugin" pour pouvoir la commande "mvn surefire-report:report"

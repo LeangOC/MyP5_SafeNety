@@ -109,3 +109,6 @@ Solution_15
 
 Solution_16
 ### Ajout Plugin "maven-surefire-report-plugin" pour pouvoir la commande "mvn surefire-report:report"
+
+Solution_Fin
+### 

@@ -14,21 +14,6 @@ Analogie : Un cadre de travail pour développer notre application.
 Quoi? : C’est un composant très particulier de Spring Framework, dans la mesure où il nous permet 
 de mettre en œuvre tous les autres ( Spring Web, Spring Data ....).
 
-Comment : Des annotations pour
-@SpringBootApplication : c’est une annotation composite qui combine 3 annotations clés : classe principale
-    @Configuration :  indique que cette classe contient une configuration Spring.
-    @EnableAutoConfiguration : devine et configure automatiquement les composants nécessaires (web, JPA, sécurité, etc.).
-    @ComponentScan : dit à Spring de scanner les packages à partir de ce point
-
-
-@Component : Pour qu’une classe soit déclarée en tant que bean : 
-            classe service ou métier (businessService) qui va chercher les données ( la classe HelloWorld qui détient le message Hello World).
-@Autowired : Pour qu’un bean soit injecté dans un attribut : classe qui utilise l'attribut service bean ( classe principale HelloworldApplication)
-
-
-
-
-
 ### Les principes SOLID
 But: concevoir un code plus facile à :
     - comprendre

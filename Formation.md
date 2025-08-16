@@ -43,3 +43,4 @@ sans avoir à modifier le modèle ou le contrôleur : le principe "O"
 But: objet qui transporte des données entre des différentes couches de API  
     - sans risquer d’exposer des informations sensibles ( Ex : mot de passe )
     - que les informations nécessaires ( Ex : nom et prénom sans le reste (age,adresse ....)) 
+ Ex : objets DTO qui ne contiennent que les données nécessaires pour le retour client.

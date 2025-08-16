@@ -1,17 +1,15 @@
 package oc.p5.SafeNety.service;
 
+import oc.p5.SafeNety.dto.*;
+import oc.p5.SafeNety.model.*;
+import oc.p5.SafeNety.service.AlertService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import oc.p5.SafeNety.model.Firestation;
-import oc.p5.SafeNety.model.MedicalRecord;
-import oc.p5.SafeNety.model.Person;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class AlertServiceTest {
 
@@ -28,33 +26,33 @@ class AlertServiceTest {
         firestations = new ArrayList<>();
         medicalRecords = new ArrayList<>();
 
-        // Ajoute une personne adulte
+        // Adulte
         persons.add(new Person("John", "Boyd", "1509 Culver St", "Culver", "97451", "841-874-6512", "john@email.com"));
         medicalRecords.add(new MedicalRecord("John", "Boyd", "03/06/1984",
                 List.of("aznol:350mg"), List.of("nillacilan")));
 
-        // Ajoute un enfant
+        // Enfant
         persons.add(new Person("Tenley", "Boyd", "1509 Culver St", "Culver", "97451", "841-874-6512", "tenz@email.com"));
         medicalRecords.add(new MedicalRecord("Tenley", "Boyd", "02/18/2012", List.of(), List.of("peanut")));
 
         // Caserne
         firestations.add(new Firestation("1509 Culver St", "3"));
 
-        // Création du service avec injection manuelle
+        // Service
         alertService = new AlertService(persons, firestations, medicalRecords);
     }
 
     @Test
     void testGetChildrenByAddress() {
-        Map<String, Object> result = alertService.getChildrenByAddress("1509 Culver St");
-        List<?> children = (List<?>) result.get("children");
-        List<?> others = (List<?>) result.get("otherHouseholdMembers");
+        ChildrenByAddressDTO result = alertService.getChildrenByAddress("1509 Culver St");
 
-        assertEquals(1, children.size());
-        assertEquals(1, others.size());
+        assertEquals(1, result.getChildren().size());
+        assertEquals(1, result.getOtherHouseholdMembers().size());
 
-        Map<String, Object> child = (Map<String, Object>) children.get(0);
-        assertEquals("Tenley", child.get("firstName"));
+        ChildDTO child = result.getChildren().get(0);
+        assertEquals("Tenley", child.getFirstName());
+        assertEquals("Boyd", child.getLastName());
+        assertTrue(child.getAge() > 0);
     }
 
     @Test
@@ -65,26 +63,28 @@ class AlertServiceTest {
 
     @Test
     void testGetPersonsWithMedicalInfoByAddress() {
-        Map<String, Object> result = alertService.getPersonsWithMedicalInfoByAddress("1509 Culver St");
+        PersonsAndStationDTO result = alertService.getPersonsWithMedicalInfoByAddress("1509 Culver St");
 
-        assertEquals("3", result.get("stationNumber"));
-        List<?> residents = (List<?>) result.get("residents");
-        assertEquals(2, residents.size());
+        assertEquals("3", result.getStationNumber());
+        assertEquals(2, result.getResidents().size());
 
-        Map<String, Object> resident = (Map<String, Object>) residents.get(0);
-        assertTrue(resident.containsKey("firstName"));
-        assertTrue(resident.containsKey("age"));
-        assertTrue(resident.containsKey("medications"));
+        PersonMedicalInfoDTO resident = result.getResidents().get(0);
+        assertNotNull(resident.getFirstName());
+        assertTrue(resident.getAge() > 0);
+        assertNotNull(resident.getMedications());
     }
 
     @Test
     void testGetPersonsCoveredByStation() {
-        Map<String, Object> result = alertService.getPersonsCoveredByStation("3");
+        PersonsCoveredByStationDTO result = alertService.getPersonsCoveredByStation("3");
 
-        assertEquals(1, result.get("childCount"));
-        assertEquals(1, result.get("adultCount"));
-        List<?> residents = (List<?>) result.get("residents");
-        assertEquals(2, residents.size());
+        assertEquals(1, result.getChildCount());
+        assertEquals(1, result.getAdultCount());
+        assertEquals(2, result.getResidents().size());
+
+        ResidentDTO resident = result.getResidents().get(0);
+        assertNotNull(resident.getFirstName());
+        assertNotNull(resident.getPhone());
     }
 
     @Test
@@ -93,34 +93,33 @@ class AlertServiceTest {
         assertTrue(emails.contains("john@email.com"));
         assertTrue(emails.contains("tenz@email.com"));
     }
+
     @Test
     void testGetHouseholdsByStations() {
-        Map<String, List<Map<String, Object>>> result = alertService.getHouseholdsByStations("3");
+        HouseholdsByStationDTO result = alertService.getHouseholdsByStations("3");
 
-        assertEquals(1, result.size());
-        assertTrue(result.containsKey("1509 Culver St"));
+        assertEquals(1, result.getHouseholds().size());
+        assertTrue(result.getHouseholds().containsKey("1509 Culver St"));
 
-        List<Map<String, Object>> household = result.get("1509 Culver St");
+        List<PersonMedicalInfoDTO> household = result.getHouseholds().get("1509 Culver St");
         assertEquals(2, household.size());
 
-        Map<String, Object> person1 = household.get(0);
-        assertTrue(person1.containsKey("firstName"));
-        assertTrue(person1.containsKey("age"));
-        assertTrue(person1.containsKey("medications"));
+        PersonMedicalInfoDTO person1 = household.get(0);
+        assertNotNull(person1.getFirstName());
+        assertTrue(person1.getAge() > 0);
+        assertNotNull(person1.getMedications());
     }
+
     @Test
     void testGetPersonsByLastName() {
-        List<Map<String, Object>> personsByLastName = alertService.getPersonsByLastName("Boyd");
+        List<PersonInfoDTO> personsByLastName = alertService.getPersonsByLastName("Boyd");
 
         assertEquals(2, personsByLastName.size());
 
-        Map<String, Object> person = personsByLastName.get(0);
-        assertEquals("Boyd", person.get("lastName"));
-        assertTrue(person.containsKey("firstName"));
-        assertTrue(person.containsKey("age"));
-        assertTrue(person.containsKey("medications"));
+        PersonInfoDTO person = personsByLastName.get(0);
+        assertEquals("Boyd", person.getLastName());
+        assertNotNull(person.getFirstName());
+        assertTrue(person.getAge() > 0);
+        assertNotNull(person.getMedications());
     }
-
-
 }
-

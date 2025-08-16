@@ -1,8 +1,8 @@
-main
-### Projet MyP5_SafeNety initialisé sur le  site Sprint Initializr et importé dans Intelliji.
+# main
+Projet MyP5_SafeNety initialisé sur le  site Sprint Initializr et importé dans Intelliji.
 
-dev1
-### Utilisation de API Rest http://localhost:8080/hello avec la notation @RestController
+# dev1
+Utilisation de API Rest http://localhost:8080/hello avec la notation @RestController
 
 dev2
 ### model mvc pour l'url http://localhost:8080/firestation?stationNumber==<station_number>
@@ -113,3 +113,23 @@ Solution_16
 
 Solution_Fin
 ### Nettoyage des codes, documentations
+
+Solution_Fin_DTO
+### Migrer vers DTO les 5 endpoints  : /firestation, /childAlert, /fire, /flood/stations et /personInfo )
+### Création Objets DTO : PersonInfoDTO, PersonMedicalInfoDTO, ResidentDTO, PersonsCoveredByStationDTO,ChildDTO,PersonsAndStationDTO,ChildrenByAddressDTO,HouseholdMemberDTO,HouseholdsByStationDTO
+### Réfactorisation des classes : AlertController, AlertService, AlertControllerTest, AlertServiceTest
+### Rapport de test couverture code total Jacoco = 94%
+### Rapport de test couverture code Jacoco package oc.p5.SafeNety.dto = 100%
+## oc.p5.SafeNety.dto
+Element	Missed              Instructions	Cov.	Missed Branches	Cov.	Missed	Cxty	Missed	Lines	Missed	Methods	Missed	Classes
+PersonInfoDTO               52	            100 %		    n/a	            0	        15	    0	    15	    0	    15	    0	    1
+PersonMedicalInfoDTO	    45	            100 %		    n/a	            0	        13	    0	    13	    0	    13	    0	    1
+ResidentDTO	                31	            100 %		    n/a	            0	        9	    0	    9	    0	    9	    0       1
+PersonsCoveredByStationDTO	24	            100 %		    n/a	            0	        7	    0	    7	    0	    7	    0	    1
+ChildDTO	                24	            100 %		    n/a	            0	        7	    0	    7	    0	    7  	    0	    1
+PersonsAndStationDTO	    17	            100 %		    n/a	            0	        5	    0	    5	    0	    5	    0	    1
+ChildrenByAddressDTO	    17	            100 %		    n/a	            0	        5	    0	    6	    0	    5	    0	    1
+HouseholdMemberDTO	        17	            100 %		    n/a	            0	        5	    0	    5	    0	    5	    0	    1
+HouseholdsByStationDTO	    10	            100 %		    n/a	            0	        3	    0	    3	    0	    3	    0	    1
+PersonDTO	                3	            100 %		    n/a	            0	        1	    0	    1	    0	    1	    0	    1
+Total	                    0 of 240	    100 %	0 of 0	n/a	            0	        70	    0	    71	    0	    70	    0	    10

@@ -1,7 +1,8 @@
 package oc.p5.SafeNety.controller;
 
-import org.junit.jupiter.api.Test;
+import oc.p5.SafeNety.dto.*;
 import oc.p5.SafeNety.service.AlertService;
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -25,20 +26,32 @@ public class AlertControllerTest {
     @MockBean
     private AlertService alertService;
 
-    @Test
-    void testChildAlert() throws Exception {
-        Map<String, Object> response = new HashMap<>();
-        response.put("children", List.of(Map.of("firstName", "Tenley", "lastName", "Boyd", "age", 12)));
-        response.put("otherHouseholdMembers", List.of(Map.of("firstName", "John", "lastName", "Boyd")));
+@Test
+void testChildAlert() throws Exception {
 
-        when(alertService.getChildrenByAddress("1509 Culver St")).thenReturn(response);
+    ChildDTO child = new ChildDTO();
+    child.setFirstName("Tenley");
+    child.setLastName("Boyd");
+    child.setAge(12);
 
-        mockMvc.perform(get("/childAlert")
-                        .param("address", "1509 Culver St"))
-                .andExpect(status().isOk())
-                .andExpect(jsonPath("$.children[0].firstName").value("Tenley"))
-                .andExpect(jsonPath("$.otherHouseholdMembers[0].firstName").value("John"));
-    }
+    HouseholdMemberDTO member = new HouseholdMemberDTO();
+    member.setFirstName("John");
+    member.setLastName("Boyd");
+
+    ChildrenByAddressDTO response = new ChildrenByAddressDTO();
+    response.setChildren(List.of(child));
+    response.setOtherHouseholdMembers(List.of(member));
+
+    // Mock du service avec DTO
+    when(alertService.getChildrenByAddress("1509 Culver St")).thenReturn(response);
+
+    // Vérification avec MockMvc
+    mockMvc.perform(get("/childAlert")
+                    .param("address", "1509 Culver St"))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.children[0].firstName").value("Tenley"))
+            .andExpect(jsonPath("$.otherHouseholdMembers[0].firstName").value("John"));
+}
 
     @Test
     void testPhoneAlert() throws Exception {
@@ -54,16 +67,17 @@ public class AlertControllerTest {
 
     @Test
     void testFireAddressAlert() throws Exception {
-        Map<String, Object> response = new HashMap<>();
-        response.put("stationNumber", "3");
-        response.put("residents", List.of(Map.of(
-                "firstName", "John",
-                "lastName", "Boyd",
-                "phone", "841-874-6512",
-                "age", 40,
-                "medications", List.of("aznol:350mg"),
-                "allergies", List.of("nillacilan")
-        )));
+        PersonMedicalInfoDTO person = new PersonMedicalInfoDTO();
+        person.setFirstName("John");
+        person.setLastName("Boyd");
+        person.setPhone("841-874-6512");
+        person.setAge(40);
+        person.setMedications(List.of("aznol:350mg"));
+        person.setAllergies(List.of("nillacilan"));
+
+        PersonsAndStationDTO response = new PersonsAndStationDTO();
+        response.setStationNumber("3");
+        response.setResidents(List.of(person));
 
         when(alertService.getPersonsWithMedicalInfoByAddress("1509 Culver St")).thenReturn(response);
 
@@ -77,37 +91,38 @@ public class AlertControllerTest {
 
     @Test
     void testFloodStationsAlert() throws Exception {
-        Map<String, List<Map<String, Object>>> response = new HashMap<>();
-        response.put("1509 Culver St", List.of(Map.of(
-                "firstName", "John",
-                "lastName", "Boyd",
-                "phone", "841-874-6512",
-                "age", 40,
-                "medications", List.of("aznol:350mg"),
-                "allergies", List.of("nillacilan")
-        )));
+        PersonMedicalInfoDTO person = new PersonMedicalInfoDTO();
+        person.setFirstName("John");
+        person.setLastName("Boyd");
+        person.setPhone("841-874-6512");
+        person.setAge(40);
+        person.setMedications(List.of("aznol:350mg"));
+        person.setAllergies(List.of("nillacilan"));
+
+        HouseholdsByStationDTO response = new HouseholdsByStationDTO();
+        response.setHouseholds(Map.of("1509 Culver St", List.of(person)));
 
         when(alertService.getHouseholdsByStations("3")).thenReturn(response);
 
         mockMvc.perform(get("/flood/stations")
                         .param("stations", "3"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.['1509 Culver St'][0].firstName").value("John"))
-                .andExpect(jsonPath("$.['1509 Culver St'][0].medications[0]").value("aznol:350mg"));
+                .andExpect(jsonPath("$.households['1509 Culver St'][0].firstName").value("John"))
+                .andExpect(jsonPath("$.households['1509 Culver St'][0].medications[0]").value("aznol:350mg"));
     }
+
     @Test
     void testGetPersonsByStation() throws Exception {
-        Map<String, Object> response = new HashMap<>();
-        response.put("adultCount", 2);
-        response.put("childCount", 1);
-        response.put("residents", List.of(
-                Map.of(
-                        "firstName", "John",
-                        "lastName", "Boyd",
-                        "address", "1509 Culver St",
-                        "phone", "841-874-6512"
-                )
-        ));
+        ResidentDTO resident = new ResidentDTO();
+        resident.setFirstName("John");
+        resident.setLastName("Boyd");
+        resident.setAddress("1509 Culver St");
+        resident.setPhone("841-874-6512");
+
+        PersonsCoveredByStationDTO response = new PersonsCoveredByStationDTO();
+        response.setAdultCount(2);
+        response.setChildCount(1);
+        response.setResidents(List.of(resident));
 
         when(alertService.getPersonsCoveredByStation("1")).thenReturn(response);
 
@@ -118,21 +133,19 @@ public class AlertControllerTest {
                 .andExpect(jsonPath("$.childCount").value(1))
                 .andExpect(jsonPath("$.residents[0].firstName").value("John"));
     }
+
     @Test
     void testGetPersonsByLastName() throws Exception {
-        List<Map<String, Object>> persons = List.of(
-                Map.of(
-                        "firstName", "John",
-                        "lastName", "Boyd",
-                        "address", "1509 Culver St",
-                        "email", "jaboyd@email.com",
-                        "age", 40,
-                        "medications", List.of("aznol:350mg"),
-                        "allergies", List.of("nillacilan")
-                )
-        );
+        PersonInfoDTO person = new PersonInfoDTO();
+        person.setFirstName("John");
+        person.setLastName("Boyd");
+        person.setAddress("1509 Culver St");
+        person.setEmail("jaboyd@email.com");
+        person.setAge(40);
+        person.setMedications(List.of("aznol:350mg"));
+        person.setAllergies(List.of("nillacilan"));
 
-        when(alertService.getPersonsByLastName("Boyd")).thenReturn(persons);
+        when(alertService.getPersonsByLastName("Boyd")).thenReturn(List.of(person));
 
         mockMvc.perform(get("/personInfo")
                         .param("lastName", "Boyd"))
@@ -141,6 +154,7 @@ public class AlertControllerTest {
                 .andExpect(jsonPath("$[0].email").value("jaboyd@email.com"))
                 .andExpect(jsonPath("$[0].medications[0]").value("aznol:350mg"));
     }
+
     @Test
     void testGetEmailsByCity() throws Exception {
         List<String> emails = List.of("jaboyd@email.com", "tenz@email.com");
@@ -153,6 +167,7 @@ public class AlertControllerTest {
                 .andExpect(jsonPath("$[0]").value("jaboyd@email.com"))
                 .andExpect(jsonPath("$[1]").value("tenz@email.com"));
     }
+
 
 
 }

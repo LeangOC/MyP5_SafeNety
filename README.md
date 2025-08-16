@@ -2,7 +2,7 @@
 - Projet MyP5_SafeNety initialisé sur le  site Sprint Initializr et importé dans Intelliji.
 
 
-# dev1
+**dev1**
 Utilisation de API Rest http://localhost:8080/hello avec la notation @RestController
 
 

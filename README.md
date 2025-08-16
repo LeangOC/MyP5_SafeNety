@@ -117,8 +117,8 @@
 - Nettoyage des codes, documentations
 
 # Solution_Fin_DTO
-- Migrer vers DTO les 5 endpoints  : /firestation, /childAlert, /fire, /flood/stations et /personInfo )
-- Création Objets DTO : PersonInfoDTO, PersonMedicalInfoDTO, ResidentDTO, PersonsCoveredByStationDTO,ChildDTO,PersonsAndStationDTO,ChildrenByAddressDTO,HouseholdMemberDTO,HouseholdsByStationDTO
+- Migrer vers DTO les 5 endpoints  : /firestation, /childAlert, /fire, /flood/stations et /personInfo
+- Création Objets DTO : PersonInfoDTO, PersonMedicalInfoDTO, ResidentDTO, PersonsCoveredByStationDTO, ChildDTO, PersonsAndStationDTO, ChildrenByAddressDTO, HouseholdMemberDTO,HouseholdsByStationDTO
 - Réfactorisation des classes : AlertController, AlertService, AlertControllerTest, AlertServiceTest
 - Rapport de test couverture code total Jacoco = 94%
 - Rapport de test couverture code Jacoco package oc.p5.SafeNety.dto = 100%

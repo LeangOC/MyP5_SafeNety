@@ -2,12 +2,12 @@
 - Projet MyP5_SafeNety initialisé sur le  site Sprint Initializr et importé dans Intelliji.
 
 
-**dev1**
-Utilisation de API Rest http://localhost:8080/hello avec la notation @RestController
+## dev1
+- Utilisation de API Rest http://localhost:8080/hello avec la notation @RestController
 
 
 #### dev2
-model mvc pour l'url http://localhost:8080/firestation?stationNumber==<station_number>
+- model mvc pour l'url http://localhost:8080/firestation?stationNumber==<station_number>
     qui affiche juste l'adresse correspondante.
 
 #### dev3  

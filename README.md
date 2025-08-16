@@ -1,10 +1,10 @@
 # main
-Projet MyP5_SafeNety initialisé sur le  site Sprint Initializr et importé dans Intelliji.
+## Projet MyP5_SafeNety initialisé sur le  site Sprint Initializr et importé dans Intelliji.
 
 # dev1
-Utilisation de API Rest http://localhost:8080/hello avec la notation @RestController
+### Utilisation de API Rest http://localhost:8080/hello avec la notation @RestController
 
-dev2
+#### dev2
 ### model mvc pour l'url http://localhost:8080/firestation?stationNumber==<station_number>
     qui affiche juste l'adresse correspondante.
 
@@ -121,7 +121,9 @@ Solution_Fin_DTO
 ### Rapport de test couverture code total Jacoco = 94%
 ### Rapport de test couverture code Jacoco package oc.p5.SafeNety.dto = 100%
 ## oc.p5.SafeNety.dto
-Element	Missed              Instructions	Cov.	Missed Branches	Cov.	Missed	Cxty	Missed	Lines	Missed	Methods	Missed	Classes
+
+# Element	Missed              Instructions	Cov.	Missed Branches	Cov.	Missed	Cxty	Missed	Lines	Missed	Methods	Missed	Classes
+
 PersonInfoDTO               52	            100 %		    n/a	            0	        15	    0	    15	    0	    15	    0	    1
 PersonMedicalInfoDTO	    45	            100 %		    n/a	            0	        13	    0	    13	    0	    13	    0	    1
 ResidentDTO	                31	            100 %		    n/a	            0	        9	    0	    9	    0	    9	    0       1

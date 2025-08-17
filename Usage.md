@@ -8,7 +8,7 @@ suivantes : prénom, nom, adresse, numéro de téléphone. De plus, elle doit fo
 décompte du nombre d'adultes et du nombre d'enfants (tout individu âgé de 18 ans ou
 moins) dans la zone desservie.
 - http://localhost:8080/firestation?stationNumber=1
-- 
+
 {
 "adultCount": 5,
 "residents": [

@@ -118,11 +118,11 @@
 
 # Solution_Fin_DTO
 - Migrer vers DTO les 5 endpoints  : 
-    - http://localhost:8080/firestation?stationNumber=<station_number>
-    - http://localhost:8080/childAlert?address='<address>'
-    - http://localhost:8080/fire?address=<address->
-    - http://localhost:8080/flood/stations?stations=<a_list_of_station_numbers>
-    - http://localhost:8080/personInfolastName=<lastName>
+    - http://localhost:8080/firestation?stationNumber=<put_station_number>
+    - http://localhost:8080/childAlert?address=<put_address>
+    - http://localhost:8080/fire?address=<put_address>
+    - http://localhost:8080/flood/stations?stations=<put_a_list_of_station_numbers>
+    - http://localhost:8080/personInfolastName=<put_lastName>
 
 - Création Objets DTO : PersonInfoDTO, PersonMedicalInfoDTO, ResidentDTO, PersonsCoveredByStationDTO, ChildDTO,
                     PersonsAndStationDTO, ChildrenByAddressDTO, HouseholdMemberDTO,HouseholdsByStationDTO

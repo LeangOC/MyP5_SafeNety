@@ -119,16 +119,18 @@
 # Solution_Fin_DTO
 - Migrer vers DTO les 5 endpoints  : 
     - http://localhost:8080/firestation?stationNumber=<station_number>
-    - http://localhost:8080/childAlert?address=<address>
-    - http://localhost:8080/phoneAlert?firestation=<firestation_number>
-    - http://localhost:8080/fire?address=<address>
-    - http://localhost:8080/flood/stations?stations=<a list of station_numbers>
+    - http://localhost:8080/childAlert?address='<address>'
+    - http://localhost:8080/fire?address=<address->
+    - http://localhost:8080/flood/stations?stations=<a_list_of_station_numbers>
     - http://localhost:8080/personInfolastName=<lastName>
-    - http://localhost:8080/communityEmail?city=<city>
+
 - Création Objets DTO : PersonInfoDTO, PersonMedicalInfoDTO, ResidentDTO, PersonsCoveredByStationDTO, ChildDTO,
-                        PersonsAndStationDTO, ChildrenByAddressDTO, HouseholdMemberDTO,HouseholdsByStationDTO
+                    PersonsAndStationDTO, ChildrenByAddressDTO, HouseholdMemberDTO,HouseholdsByStationDTO
+
 - Réfactorisation des classes : AlertController, AlertService, AlertControllerTest, AlertServiceTest
+
 - Rapport de test couverture code total Jacoco = 94%
+
 - Rapport de test couverture code Jacoco package oc.p5.SafeNety.dto = 100%
 
 

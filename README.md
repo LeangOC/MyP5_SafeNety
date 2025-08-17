@@ -129,10 +129,7 @@
 
 - Réfactorisation des classes : AlertController, AlertService, AlertControllerTest, AlertServiceTest
 
-- Rapport de test couverture code total Jacoco = 94%
-
-- Rapport de test couverture code Jacoco package oc.p5.SafeNety.dto = 100%
-
+- Rapport de tests Jacoco avec une couverture de code = 94%
 
 
 

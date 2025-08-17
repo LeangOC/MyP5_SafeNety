@@ -1,6 +1,6 @@
 Les requêtes de tests de fonctionnalité sont soumis depuis POSTMAN :
 
-# GET http://localhost:8080/firestation?stationNumber=<station_number>
+### GET http://localhost:8080/firestation?stationNumber=<station_number>
 Cette url doit retourner une liste des personnes couvertes par la caserne de pompiers
 correspondante. Donc, si le numéro de station = 1, elle doit renvoyer les habitants
 couverts par la station numéro 1. La liste doit inclure les informations spécifiques

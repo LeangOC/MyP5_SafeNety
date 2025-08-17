@@ -118,34 +118,19 @@
 
 # Solution_Fin_DTO
 - Migrer vers DTO les 5 endpoints  : 
-    - http://localhost:8080/firestation?stationNumber=<station_number>;
+    - http://localhost:8080/firestation?stationNumber=<station_number>
     - http://localhost:8080/childAlert?address=<address>
     - http://localhost:8080/phoneAlert?firestation=<firestation_number>
-    - 
-    - /firestation, /childAlert, /fire, /flood/stations et /personInfo
+    - http://localhost:8080/fire?address=<address>
+    - http://localhost:8080/flood/stations?stations=<a list of station_numbers>
+    - http://localhost:8080/personInfolastName=<lastName>
+    - http://localhost:8080/communityEmail?city=<city>
 - Création Objets DTO : PersonInfoDTO, PersonMedicalInfoDTO, ResidentDTO, PersonsCoveredByStationDTO, ChildDTO,
                         PersonsAndStationDTO, ChildrenByAddressDTO, HouseholdMemberDTO,HouseholdsByStationDTO
 - Réfactorisation des classes : AlertController, AlertService, AlertControllerTest, AlertServiceTest
 - Rapport de test couverture code total Jacoco = 94%
 - Rapport de test couverture code Jacoco package oc.p5.SafeNety.dto = 100%
 
-http://localhost:8080/fire?address=<address>
-Cette url doit retourner la liste des habitants vivant à l’adresse donnée ainsi que le
-numéro de la caserne de pompiers la desservant. La liste doit inclure le nom, le
-numéro de téléphone, l'âge et les antécédents médicaux (médicaments, posologie et
-allergies) de chaque personne.
 
-http://localhost:8080/flood/stations?stations=<a list of
-station_numbers>
-Cette url doit retourner une liste de tous les foyers desservis par la caserne. Cette
-liste doit regrouper les personnes par adresse. Elle doit aussi inclure le nom, le
-numéro de téléphone et l'âge des habitants, et faire figurer leurs antécédents
-médicaux (médicaments, posologie et allergies) à côté de chaque nom.
 
-http://localhost:8080/personInfolastName=<lastName>
-Cette url doit retourner le nom, l'adresse, l'âge, l'adresse mail et les antécédents
-médicaux (médicaments, posologie et allergies) de chaque habitant. Si plusieurs
-personnes portent le même nom, elles doivent toutes apparaître.
 
-http://localhost:8080/communityEmail?city=<city>
-Cette url doit retourner les adresses mail de tous les habitants de la ville
